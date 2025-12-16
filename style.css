@@ -1,0 +1,450 @@
+/* ============================================
+   PURE CSS CASINO LANDING PAGE
+   Dark Blue + Neon Cyan Theme with Glassmorphism
+   ============================================ */
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ============================================
+   ANIMATED BACKGROUND
+   ============================================ */
+.background {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%);
+    z-index: 0;
+}
+
+.glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.3;
+}
+
+.glow-orb-1 {
+    top: 80px;
+    left: 40px;
+    width: 384px;
+    height: 384px;
+    background: rgba(59, 130, 246, 0.4);
+    animation: pulse-slow 8s ease-in-out infinite;
+}
+
+.glow-orb-2 {
+    bottom: 80px;
+    right: 40px;
+    width: 384px;
+    height: 384px;
+    background: rgba(34, 211, 238, 0.4);
+    animation: pulse-slow 8s ease-in-out infinite 4s;
+}
+
+@keyframes pulse-slow {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.1);
+    }
+}
+
+/* ============================================
+   MAIN CONTAINER & LAYOUT
+   ============================================ */
+.container {
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+    padding: 48px 16px;
+}
+
+.content-wrapper {
+    max-width: 448px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   GLASSMORPHISM CARD BASE
+   ============================================ */
+.card {
+    display: block;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   HEADER SECTION
+   ============================================ */
+.header {
+    text-align: center;
+    margin-bottom: 32px;
+    animation: fade-in 0.8s ease-out forwards;
+}
+
+.profile-image {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 16px;
+    padding: 4px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #60a5fa, #22d3ee);
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
+}
+
+.profile-image svg {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 50%;
+    background: #0f172a;
+    color: #22d3ee;
+}
+
+.username {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 8px;
+    letter-spacing: -0.025em;
+}
+
+.tagline {
+    font-size: 18px;
+    color: #67e8f9;
+}
+
+/* ============================================
+   FEATURED OFFER CARD
+   ============================================ */
+.featured-offer {
+    margin-bottom: 24px;
+    animation: fade-in 0.8s ease-out 0.1s forwards;
+    opacity: 0;
+}
+
+.card-featured {
+    padding: 24px;
+    border: 1px solid rgba(34, 211, 238, 0.3);
+    box-shadow: 0 0 30px rgba(34, 211, 238, 0.5), 0 0 60px rgba(34, 211, 238, 0.2);
+}
+
+.card-featured:hover {
+    border-color: rgba(34, 211, 238, 0.6);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.badge {
+    font-size: 12px;
+    font-weight: bold;
+    color: #22d3ee;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: rgba(34, 211, 238, 0.1);
+    padding: 4px 12px;
+    border-radius: 9999px;
+}
+
+.offer-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.offer-description {
+    font-size: 14px;
+    color: #cbd5e1;
+    margin-bottom: 16px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(90deg, #3b82f6, #22d3ee);
+    color: white;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease;
+}
+
+.card-featured:hover .cta-button {
+    box-shadow: 0 0 40px rgba(34, 211, 238, 0.6), 0 0 80px rgba(34, 211, 238, 0.3);
+}
+
+/* ============================================
+   CASINO OFFERS LIST
+   ============================================ */
+.offers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.card-offer {
+    padding: 20px;
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    animation: fade-in 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.card-offer:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.card-offer:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.card-offer:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.card-offer:nth-child(4) {
+    animation-delay: 0.5s;
+}
+
+.card-offer:hover {
+    border-color: rgba(96, 165, 250, 0.5);
+}
+
+.offer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.offer-heading {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+.card-offer:hover .offer-heading {
+    color: #22d3ee;
+}
+
+.offer-subtitle {
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+/* ============================================
+   DISCORD SECTION
+   ============================================ */
+.discord-section {
+    margin-bottom: 32px;
+    animation: fade-in 0.8s ease-out 0.6s forwards;
+    opacity: 0;
+}
+
+.card-discord {
+    padding: 20px;
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.1), rgba(34, 211, 238, 0.1));
+}
+
+.card-discord:hover {
+    border-color: rgba(96, 165, 250, 0.6);
+}
+
+.discord-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.discord-icon {
+    width: 24px;
+    height: 24px;
+    color: #22d3ee;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.card-discord:hover .discord-icon {
+    transform: scale(1.1);
+}
+
+.discord-text {
+    text-align: center;
+}
+
+.discord-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.card-discord:hover .discord-title {
+    color: #22d3ee;
+}
+
+.discord-subtitle {
+    font-size: 14px;
+    color: #94a3b8;
+    margin-top: 4px;
+}
+
+/* ============================================
+   FOOTER & DISCLAIMER
+   ============================================ */
+.footer {
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.6;
+    color: #64748b;
+    animation: fade-in 0.8s ease-out 0.7s forwards;
+    opacity: 0;
+}
+
+.disclaimer-card {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(51, 65, 85, 0.3);
+}
+
+.warning-text {
+    font-weight: 600;
+    color: #fbbf24;
+    margin-bottom: 8px;
+}
+
+.disclaimer-text {
+    color: #94a3b8;
+    margin-bottom: 12px;
+}
+
+.copyright {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(51, 65, 85, 0.3);
+    color: #475569;
+}
+
+/* ============================================
+   ICONS
+   ============================================ */
+.external-link-icon {
+    width: 20px;
+    height: 20px;
+    color: #60a5fa;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.card-featured:hover .external-link-icon,
+.card-offer:hover .external-link-icon,
+.card-discord:hover .external-link-icon {
+    transform: translate(4px, -4px);
+}
+
+.sparkles-icon {
+    width: 48px;
+    height: 48px;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   CUSTOM SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(34, 211, 238, 0.5);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(34, 211, 238, 0.7);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 640px) {
+    .username {
+        font-size: 28px;
+    }
+
+    .tagline {
+        font-size: 16px;
+    }
+
+    .offer-title {
+        font-size: 20px;
+    }
+
+    .offer-heading {
+        font-size: 18px;
+    }
+
+    .glow-orb {
+        width: 256px;
+        height: 256px;
+    }
+}
