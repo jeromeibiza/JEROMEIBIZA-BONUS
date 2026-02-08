@@ -1,450 +1,344 @@
-/* ============================================
-   PURE CSS CASINO LANDING PAGE
-   Dark Blue + Neon Cyan Theme with Glassmorphism
-   ============================================ */
+:root{
+  --bg1:#0a1e4a;
+  --bg2:#0b2b66;
 
-/* Reset & Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  --card:#0e2a57;
+  --cardTop:#0c254f;
+
+  --text:#eaf3ff;
+  --muted:rgba(234,243,255,.72);
+
+  --stroke:rgba(255,255,255,.10);
+  --shadow: 0 18px 55px rgba(0,0,0,.38);
+
+  --badgeBg: rgba(0, 220, 255, .14);
+  --badgeStroke: rgba(0, 220, 255, .22);
+
+  --cta1:#1e78ff;
+  --cta2:#23d7ff;
 }
 
-html {
-    scroll-behavior: smooth;
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color:var(--text);
+  background: radial-gradient(1100px 700px at 50% 15%, #11408f 0%, var(--bg2) 40%, var(--bg1) 100%);
+  overflow-x:hidden;
 }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    min-height: 100vh;
-    overflow-x: hidden;
-    color: white;
+/* Background orbs like screenshot */
+.background{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+}
+.glow{
+  position:absolute;
+  width:520px;
+  height:520px;
+  border-radius:999px;
+  filter: blur(70px);
+  opacity:.55;
+  mix-blend-mode: screen;
+  animation: floaty 10s ease-in-out infinite;
+}
+.glow-1{
+  left:-180px;
+  top:110px;
+  background: radial-gradient(circle at 30% 30%, rgba(0,255,255,.55), rgba(0,120,255,0) 65%);
+}
+.glow-2{
+  right:-210px;
+  top:30px;
+  background: radial-gradient(circle at 30% 30%, rgba(140,0,255,.45), rgba(0,120,255,0) 70%);
+  animation-duration: 12s;
+}
+@keyframes floaty{
+  0%{ transform: translate3d(0,0,0) scale(1); }
+  50%{ transform: translate3d(0,-22px,0) scale(1.03); }
+  100%{ transform: translate3d(0,0,0) scale(1); }
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+/* Layout */
+.container{
+  width:min(720px, 92vw);
+  margin: 18px auto 44px;
+}
+.content{ padding-bottom: 6px; }
+
+/* Header */
+.header{
+  text-align:center;
+  padding: 6px 0 16px;
+}
+.logo{
+  width:86px;
+  height:86px;
+  margin: 0 auto 10px;
+  position:relative;
+  display:grid;
+  place-items:center;
+}
+.logo-ring{
+  position:absolute;
+  inset:0;
+  border-radius:999px;
+  border: 3px solid rgba(0, 220, 255, .55);
+  box-shadow: 0 0 25px rgba(0, 220, 255, .35);
+}
+.logo-icon{
+  width:34px;
+  height:34px;
+  opacity:.95;
+  color: rgba(0, 220, 255, .95);
 }
 
-/* ============================================
-   ANIMATED BACKGROUND
-   ============================================ */
-.background {
-    position: fixed;
-    inset: 0;
-    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%);
-    z-index: 0;
+.username{
+  margin: 0;
+  font-size: 30px;
+  letter-spacing:.6px;
+  font-weight: 900;
+}
+.tagline{
+  margin: 8px 0 0;
+  color: rgba(0,220,255,.85);
+  font-size: 16px;
 }
 
-.glow-orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.3;
+/* Sections */
+.section{ margin-top: 14px; }
+.section-title{
+  margin: 10px 0 12px;
+  font-size: 13px;
+  letter-spacing:.9px;
+  text-transform: uppercase;
+  color: rgba(234,243,255,.92);
 }
 
-.glow-orb-1 {
-    top: 80px;
-    left: 40px;
-    width: 384px;
-    height: 384px;
-    background: rgba(59, 130, 246, 0.4);
-    animation: pulse-slow 8s ease-in-out infinite;
+/* Card base - same vibe as screenshot */
+.card{
+  position:relative;
+  display:block;
+  text-decoration:none;
+  color:var(--text);
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+  overflow:hidden;
+  transform: translateZ(0);
 }
 
-.glow-orb-2 {
-    bottom: 80px;
-    right: 40px;
-    width: 384px;
-    height: 384px;
-    background: rgba(34, 211, 238, 0.4);
-    animation: pulse-slow 8s ease-in-out infinite 4s;
+.card::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background:
+    radial-gradient(700px 260px at 20% 0%, rgba(0,170,255,.20), transparent 60%),
+    radial-gradient(700px 260px at 80% 0%, rgba(160,0,255,.18), transparent 60%);
+  opacity:.9;
+  pointer-events:none;
+}
+.card > *{ position:relative; }
+
+.card:hover{
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,.16);
+  box-shadow: 0 22px 65px rgba(0,0,0,.46);
 }
 
-@keyframes pulse-slow {
-    0%, 100% {
-        opacity: 0.3;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 0.5;
-        transform: scale(1.1);
-    }
+/* Top row inside cards */
+.card-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
-/* ============================================
-   MAIN CONTAINER & LAYOUT
-   ============================================ */
-.container {
-    position: relative;
-    z-index: 10;
-    min-height: 100vh;
-    padding: 48px 16px;
+/* Badge */
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing:.6px;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--badgeBg);
+  border: 1px solid var(--badgeStroke);
+  color: rgba(210,250,255,.98);
 }
 
-.content-wrapper {
-    max-width: 448px;
-    margin: 0 auto;
+/* External icon */
+.ext{
+  width:38px;
+  height:38px;
+  display:grid;
+  place-items:center;
+  border-radius: 12px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+}
+.ext svg{
+  width:20px;
+  height:20px;
+  opacity:.9;
 }
 
-/* ============================================
-   GLASSMORPHISM CARD BASE
-   ============================================ */
-.card {
-    display: block;
-    background: rgba(15, 23, 42, 0.6);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 16px;
-    transition: all 0.3s ease;
+/* Premium */
+.card-premium{ padding: 18px; }
+.title{
+  margin: 0 0 8px;
+  font-size: 28px;
+  font-weight: 950;
+  letter-spacing:.2px;
+}
+.desc{
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+.cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 950;
+  color:#fff;
+  background: linear-gradient(90deg, var(--cta1), var(--cta2));
+  box-shadow: 0 12px 30px rgba(30,120,255,.28);
+  border: 1px solid rgba(255,255,255,.12);
 }
 
-.card:hover {
-    transform: scale(1.05);
+/* Compact cards like screenshot */
+.card-compact{
+  padding: 16px 16px;
+  margin-top: 12px;
+}
+.row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+}
+.left{ min-width: 0; }
+.mini-title{
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing:.2px;
+}
+.mini-desc{
+  margin-top: 6px;
+  font-size: 13px;
+  color: rgba(234,243,255,.66);
+  line-height: 1.35;
 }
 
-/* ============================================
-   HEADER SECTION
-   ============================================ */
-.header {
-    text-align: center;
-    margin-bottom: 32px;
-    animation: fade-in 0.8s ease-out forwards;
+/* Stream cards grid */
+.stream-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 620px){
+  .stream-grid{ grid-template-columns: 1fr; }
 }
 
-.profile-image {
-    width: 96px;
-    height: 96px;
-    margin: 0 auto 16px;
-    padding: 4px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #60a5fa, #22d3ee);
-    box-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
+/* LIVE badge (hidden by default) */
+.live-badge{
+  position:absolute;
+  top: -10px;
+  right: -10px;
+  background: #ff0033;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 1000;
+  letter-spacing: .6px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  display:none;
+  z-index: 10;
+  animation: pulse 1.35s infinite;
+  box-shadow: 0 0 18px rgba(255,0,51,.85);
+}
+@keyframes pulse{
+  0%{ transform: scale(1); box-shadow: 0 0 14px rgba(255,0,51,.75); }
+  50%{ transform: scale(1.08); box-shadow: 0 0 30px rgba(255,0,51,1); }
+  100%{ transform: scale(1); box-shadow: 0 0 14px rgba(255,0,51,.75); }
 }
 
-.profile-image svg {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    border-radius: 50%;
-    background: #0f172a;
-    color: #22d3ee;
+/* When JS sets .live on stream card */
+.card-stream.live .live-badge{ display:block; }
+.card-stream.live{
+  border-color: rgba(255,0,51,.18);
+  box-shadow:
+    0 22px 65px rgba(0,0,0,.46),
+    0 0 0 1px rgba(255,0,51,.10) inset,
+    0 0 45px rgba(255,0,51,.18);
+}
+.card-stream.live::after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  pointer-events:none;
+  background: radial-gradient(520px 220px at 90% 0%, rgba(255,0,51,.22), transparent 60%);
+  opacity:.95;
 }
 
-.username {
-    font-size: 36px;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 8px;
-    letter-spacing: -0.025em;
+/* Discord block like screenshot big button */
+.card-discord{
+  padding: 18px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(30,120,255,.22), rgba(255,255,255,.02));
+}
+.row-center{ align-items:center; }
+.center{ text-align:left; }
+
+.discord-icon{
+  width:44px;
+  height:44px;
+  display:grid;
+  place-items:center;
+  border-radius: 14px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+}
+.discord-icon svg{
+  width:22px;
+  height:22px;
+  opacity:.95;
 }
 
-.tagline {
-    font-size: 18px;
-    color: #67e8f9;
+.discord-title{ font-size: 18px; font-weight: 950; }
+.discord-sub{
+  margin-top: 6px;
+  font-size: 13px;
+  color: rgba(234,243,255,.70);
 }
 
-/* ============================================
-   FEATURED OFFER CARD
-   ============================================ */
-.featured-offer {
-    margin-bottom: 24px;
-    animation: fade-in 0.8s ease-out 0.1s forwards;
-    opacity: 0;
+/* Footer */
+.footer{ margin-top: 16px; }
+.footer-card{
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
 }
-
-.card-featured {
-    padding: 24px;
-    border: 1px solid rgba(34, 211, 238, 0.3);
-    box-shadow: 0 0 30px rgba(34, 211, 238, 0.5), 0 0 60px rgba(34, 211, 238, 0.2);
+.warning{ margin:0 0 8px; font-weight: 950; }
+.footer-text{
+  margin:0 0 10px;
+  color: rgba(234,243,255,.75);
+  font-size: 12px;
+  line-height: 1.45;
 }
-
-.card-featured:hover {
-    border-color: rgba(34, 211, 238, 0.6);
-}
-
-.card-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 12px;
-}
-
-.badge {
-    font-size: 12px;
-    font-weight: bold;
-    color: #22d3ee;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    background: rgba(34, 211, 238, 0.1);
-    padding: 4px 12px;
-    border-radius: 9999px;
-}
-
-.offer-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 8px;
-}
-
-.offer-description {
-    font-size: 14px;
-    color: #cbd5e1;
-    margin-bottom: 16px;
-}
-
-.cta-button {
-    display: inline-block;
-    background: linear-gradient(90deg, #3b82f6, #22d3ee);
-    color: white;
-    font-weight: bold;
-    padding: 12px 24px;
-    border-radius: 12px;
-    transition: box-shadow 0.3s ease;
-}
-
-.card-featured:hover .cta-button {
-    box-shadow: 0 0 40px rgba(34, 211, 238, 0.6), 0 0 80px rgba(34, 211, 238, 0.3);
-}
-
-/* ============================================
-   CASINO OFFERS LIST
-   ============================================ */
-.offers-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-bottom: 32px;
-}
-
-.card-offer {
-    padding: 20px;
-    border: 1px solid rgba(96, 165, 250, 0.2);
-    animation: fade-in 0.8s ease-out forwards;
-    opacity: 0;
-}
-
-.card-offer:nth-child(1) {
-    animation-delay: 0.2s;
-}
-
-.card-offer:nth-child(2) {
-    animation-delay: 0.3s;
-}
-
-.card-offer:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-.card-offer:nth-child(4) {
-    animation-delay: 0.5s;
-}
-
-.card-offer:hover {
-    border-color: rgba(96, 165, 250, 0.5);
-}
-
-.offer-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-}
-
-.offer-heading {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 4px;
-    transition: color 0.3s ease;
-}
-
-.card-offer:hover .offer-heading {
-    color: #22d3ee;
-}
-
-.offer-subtitle {
-    font-size: 14px;
-    color: #94a3b8;
-}
-
-/* ============================================
-   DISCORD SECTION
-   ============================================ */
-.discord-section {
-    margin-bottom: 32px;
-    animation: fade-in 0.8s ease-out 0.6s forwards;
-    opacity: 0;
-}
-
-.card-discord {
-    padding: 20px;
-    border: 1px solid rgba(96, 165, 250, 0.3);
-    background: linear-gradient(90deg, rgba(59, 130, 246, 0.1), rgba(34, 211, 238, 0.1));
-}
-
-.card-discord:hover {
-    border-color: rgba(96, 165, 250, 0.6);
-}
-
-.discord-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-}
-
-.discord-icon {
-    width: 24px;
-    height: 24px;
-    color: #22d3ee;
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
-}
-
-.card-discord:hover .discord-icon {
-    transform: scale(1.1);
-}
-
-.discord-text {
-    text-align: center;
-}
-
-.discord-title {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    transition: color 0.3s ease;
-}
-
-.card-discord:hover .discord-title {
-    color: #22d3ee;
-}
-
-.discord-subtitle {
-    font-size: 14px;
-    color: #94a3b8;
-    margin-top: 4px;
-}
-
-/* ============================================
-   FOOTER & DISCLAIMER
-   ============================================ */
-.footer {
-    text-align: center;
-    font-size: 12px;
-    line-height: 1.6;
-    color: #64748b;
-    animation: fade-in 0.8s ease-out 0.7s forwards;
-    opacity: 0;
-}
-
-.disclaimer-card {
-    background: rgba(15, 23, 42, 0.6);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 16px;
-    border-radius: 12px;
-    border: 1px solid rgba(51, 65, 85, 0.3);
-}
-
-.warning-text {
-    font-weight: 600;
-    color: #fbbf24;
-    margin-bottom: 8px;
-}
-
-.disclaimer-text {
-    color: #94a3b8;
-    margin-bottom: 12px;
-}
-
-.copyright {
-    margin-top: 12px;
-    padding-top: 12px;
-    border-top: 1px solid rgba(51, 65, 85, 0.3);
-    color: #475569;
-}
-
-/* ============================================
-   ICONS
-   ============================================ */
-.external-link-icon {
-    width: 20px;
-    height: 20px;
-    color: #60a5fa;
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
-}
-
-.card-featured:hover .external-link-icon,
-.card-offer:hover .external-link-icon,
-.card-discord:hover .external-link-icon {
-    transform: translate(4px, -4px);
-}
-
-.sparkles-icon {
-    width: 48px;
-    height: 48px;
-}
-
-/* ============================================
-   ANIMATIONS
-   ============================================ */
-@keyframes fade-in {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ============================================
-   CUSTOM SCROLLBAR
-   ============================================ */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: rgba(15, 23, 42, 0.5);
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgba(34, 211, 238, 0.5);
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(34, 211, 238, 0.7);
-}
-
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
-@media (max-width: 640px) {
-    .username {
-        font-size: 28px;
-    }
-
-    .tagline {
-        font-size: 16px;
-    }
-
-    .offer-title {
-        font-size: 20px;
-    }
-
-    .offer-heading {
-        font-size: 18px;
-    }
-
-    .glow-orb {
-        width: 256px;
-        height: 256px;
-    }
-}
+.copy{ margin:0; color: rgba(234,243,255,.55); font-size: 12px; }
