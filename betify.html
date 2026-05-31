@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Betify Casino — Avis complet, bonus exclusif code MOON, conditions, FAQ. Présentation par JeromeIbiza.">
+<title>Betify Casino — Avis & Bonus Exclusif | JeromeIbiza</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cyan: #00D4FF; --bg-top: #0D1B3E; --bg-mid: #1A1050; --bg-bot: #2D1B69;
+    --card-bg: rgba(255,255,255,0.06); --card-border: rgba(0,212,255,0.25);
+    --card-hover: rgba(255,255,255,0.1); --text: #FFFFFF;
+    --text-muted: rgba(255,255,255,0.65); --btn-cyan: #00C8F0;
+    --badge-bg: rgba(0,212,255,0.18); --gold: #FFD700;
+    --gold-dim: rgba(255,215,0,0.12); --green: #22C55E;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { background:linear-gradient(160deg,var(--bg-top) 0%,var(--bg-mid) 40%,var(--bg-bot) 100%); min-height:100vh; color:var(--text); font-family:'Nunito',sans-serif; font-weight:600; line-height:1.5; overflow-x:hidden; }
+  body::before { content:''; position:fixed; inset:0; background-image: radial-gradient(1px 1px at 10% 15%,rgba(255,255,255,0.5) 0%,transparent 100%), radial-gradient(1px 1px at 55% 25%,rgba(255,255,255,0.4) 0%,transparent 100%), radial-gradient(1px 1px at 75% 80%,rgba(255,255,255,0.3) 0%,transparent 100%); pointer-events:none; z-index:0; }
+
+  .lang-bar { position:relative; z-index:10; display:flex; justify-content:center; flex-wrap:wrap; gap:0.4rem; padding:0.6rem 1.2rem 0; }
+  .lang-btn { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:8px; padding:0.3rem 0.5rem; cursor:pointer; transition:background 0.2s,border-color 0.2s,transform 0.1s; line-height:1; display:flex; align-items:center; }
+  .lang-btn:hover { background:rgba(255,255,255,0.14); border-color:var(--cyan); }
+  .lang-btn.active { background:rgba(0,212,255,0.18); border-color:var(--cyan); transform:scale(1.1); }
+
+  nav { position:relative; z-index:10; display:flex; align-items:center; justify-content:space-between; padding:1rem 1.5rem; border-bottom:1px solid rgba(0,212,255,0.1); backdrop-filter:blur(10px); }
+  .nav-logo { font-size:1rem; font-weight:900; letter-spacing:0.08em; color:#fff; text-decoration:none; text-transform:uppercase; }
+  .nav-links { display:flex; gap:0.75rem; }
+  .nav-link { font-size:0.82rem; font-weight:800; color:var(--text-muted); text-decoration:none; letter-spacing:0.06em; text-transform:uppercase; padding:0.3rem 0.8rem; border-radius:8px; transition:color 0.2s,background 0.2s; }
+  .nav-link:hover, .nav-link.active { color:var(--cyan); background:var(--badge-bg); }
+
+  .wrap { position:relative; z-index:1; max-width:820px; margin:0 auto; padding:1.5rem 1.2rem 4rem; }
+
+  /* HERO CASINO */
+  .casino-hero { display:flex; align-items:center; gap:1.5rem; padding:1.5rem 0 2rem; }
+  .casino-logo { width:90px; height:90px; border-radius:16px; background:rgba(0,212,255,0.1); border:2px solid rgba(0,212,255,0.4); display:flex; align-items:center; justify-content:center; font-size:2.2rem; flex-shrink:0; box-shadow:0 0 24px rgba(0,212,255,0.2); }
+  .casino-name { font-size:clamp(1.8rem,6vw,2.8rem); font-weight:900; text-transform:uppercase; letter-spacing:0.06em; color:#fff; text-shadow:0 0 24px rgba(0,212,255,0.3); }
+  .casino-tags { display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:0.6rem; }
+  .tag { background:var(--badge-bg); border:1px solid var(--card-border); border-radius:999px; padding:0.2rem 0.7rem; font-size:0.7rem; font-weight:800; color:var(--cyan); letter-spacing:0.08em; text-transform:uppercase; }
+  .tag.green { background:rgba(34,197,94,0.12); border-color:rgba(34,197,94,0.35); color:#4ADE80; }
+  .tag.gold { background:var(--gold-dim); border-color:rgba(255,215,0,0.35); color:var(--gold); }
+
+  /* SECTION */
+  .section-label { display:flex; align-items:center; gap:0.5rem; font-size:0.78rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-muted); margin:2rem 0 0.8rem; }
+  .section-label::after { content:''; flex:1; height:1px; background:linear-gradient(90deg,rgba(255,255,255,0.15),transparent); }
+
+  /* CARD */
+  .card { background:var(--card-bg); border:1px solid var(--card-border); border-radius:16px; padding:1.3rem 1.5rem; margin-bottom:0.75rem; backdrop-filter:blur(10px); }
+
+  /* BONUS BOX */
+  .bonus-box { background:rgba(0,180,255,0.15); border:1px solid rgba(0,212,255,0.5); border-radius:16px; padding:1.5rem; margin-bottom:0.75rem; position:relative; overflow:hidden; }
+  .bonus-box::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,var(--cyan),transparent); }
+  .bonus-title { font-size:1.1rem; font-weight:900; color:#fff; margin-bottom:0.8rem; }
+  .bonus-items { display:flex; flex-direction:column; gap:0.5rem; margin-bottom:1.2rem; }
+  .bonus-item { display:flex; align-items:flex-start; gap:0.6rem; font-size:0.88rem; color:var(--text-muted); }
+  .bonus-item strong { color:#fff; }
+  .bonus-item::before { content:'✅'; flex-shrink:0; }
+
+  /* CTA */
+  .btn-cta { display:block; width:100%; padding:1rem; border-radius:12px; font-family:'Nunito',sans-serif; font-size:1.05rem; font-weight:900; text-align:center; text-decoration:none; cursor:pointer; border:none; transition:transform 0.15s,box-shadow 0.2s,background 0.2s; letter-spacing:0.03em; margin-top:0.8rem; }
+  .btn-cta.cyan { background:var(--btn-cyan); color:#fff; }
+  .btn-cta.cyan:hover { background:#00E5FF; transform:translateY(-2px); box-shadow:0 6px 24px rgba(0,212,255,0.4); }
+  .code-tag { background:#0f172a; color:#7dd3fc; font-size:0.85rem; padding:0.15rem 0.6rem; border-radius:6px; font-family:monospace; font-weight:800; }
+
+  /* CONDITIONS TABLE */
+  .cond-table { width:100%; border-collapse:collapse; font-size:0.85rem; }
+  .cond-table tr { border-bottom:1px solid rgba(255,255,255,0.06); }
+  .cond-table tr:last-child { border-bottom:none; }
+  .cond-table td { padding:0.6rem 0.4rem; }
+  .cond-table td:first-child { color:var(--text-muted); font-weight:700; width:50%; }
+  .cond-table td:last-child { color:#fff; font-weight:800; text-align:right; }
+
+  /* PROS/CONS */
+  .pros-cons { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; }
+  @media(max-width:480px){ .pros-cons { grid-template-columns:1fr; } }
+  .pros { background:rgba(34,197,94,0.08); border:1px solid rgba(34,197,94,0.25); border-radius:14px; padding:1rem; }
+  .cons { background:rgba(239,68,68,0.08); border:1px solid rgba(239,68,68,0.25); border-radius:14px; padding:1rem; }
+  .pros-title { font-size:0.75rem; font-weight:900; letter-spacing:0.1em; text-transform:uppercase; color:#4ADE80; margin-bottom:0.6rem; }
+  .cons-title { font-size:0.75rem; font-weight:900; letter-spacing:0.1em; text-transform:uppercase; color:#F87171; margin-bottom:0.6rem; }
+  .pro-item, .con-item { font-size:0.82rem; color:var(--text-muted); padding:0.2rem 0; }
+  .pro-item::before { content:'✅ '; }
+  .con-item::before { content:'❌ '; }
+
+  /* RATING */
+  .rating-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:0.6rem; }
+  .rating-item { background:var(--card-bg); border:1px solid var(--card-border); border-radius:12px; padding:0.8rem; text-align:center; }
+  .rating-num { font-size:1.5rem; font-weight:900; color:var(--gold); }
+  .rating-label { font-size:0.68rem; color:var(--text-muted); font-weight:700; letter-spacing:0.06em; text-transform:uppercase; margin-top:0.2rem; }
+  .stars { color:var(--gold); font-size:0.7rem; }
+
+  /* FAQ */
+  .faq-item { border-bottom:1px solid rgba(255,255,255,0.06); }
+  .faq-item:last-child { border-bottom:none; }
+  .faq-q { width:100%; background:none; border:none; color:#fff; font-family:'Nunito',sans-serif; font-size:0.9rem; font-weight:800; text-align:left; padding:1rem 0; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+  .faq-q .arrow { color:var(--cyan); font-size:1rem; transition:transform 0.2s; flex-shrink:0; }
+  .faq-q.open .arrow { transform:rotate(180deg); }
+  .faq-a { font-size:0.84rem; color:var(--text-muted); line-height:1.7; padding-bottom:1rem; display:none; }
+  .faq-a.open { display:block; }
+
+  /* JEROME NOTE */
+  .jerome-note { background:rgba(0,180,255,0.1); border:1px solid rgba(0,212,255,0.3); border-radius:14px; padding:1.2rem; display:flex; gap:1rem; align-items:flex-start; }
+  .jerome-avatar { width:42px; height:42px; border-radius:50%; background:rgba(0,212,255,0.15); border:2px solid var(--cyan); display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0; }
+  .jerome-text { font-size:0.85rem; color:var(--text-muted); line-height:1.6; font-style:italic; }
+  .jerome-text strong { color:var(--cyan); font-style:normal; }
+
+  .footer { text-align:center; margin-top:2rem; font-size:0.75rem; color:rgba(255,255,255,0.25); font-weight:600; letter-spacing:0.06em; }
+  .footer a { color:var(--cyan); text-decoration:none; }
+
+  @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+  .card, .bonus-box, .pros-cons, .rating-grid { animation:fadeUp 0.5s ease both; }
+</style>
+</head>
+<body>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <button class="lang-btn active" onclick="setLang('fr')" title="Français"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1eb-1f1f7.svg" width="28" height="20" alt="FR"></button>
+  <button class="lang-btn" onclick="setLang('en')" title="English"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ec-1f1e7.svg" width="28" height="20" alt="GB"></button>
+  <button class="lang-btn" onclick="setLang('it')" title="Italiano"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ee-1f1f9.svg" width="28" height="20" alt="IT"></button>
+  <button class="lang-btn" onclick="setLang('de')" title="Deutsch"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1e9-1f1ea.svg" width="28" height="20" alt="DE"></button>
+  <button class="lang-btn" onclick="setLang('es')" title="Español"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ea-1f1f8.svg" width="28" height="20" alt="ES"></button>
+  <button class="lang-btn" onclick="setLang('sv')" title="Svenska"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f8-1f1ea.svg" width="28" height="20" alt="SE"></button>
+  <button class="lang-btn" onclick="setLang('nl')" title="Nederlands"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f3-1f1f1.svg" width="28" height="20" alt="NL"></button>
+  <button class="lang-btn" onclick="setLang('pl')" title="Polski"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1f1.svg" width="28" height="20" alt="PL"></button>
+  <button class="lang-btn" onclick="setLang('pt')" title="Português"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1f9.svg" width="28" height="20" alt="PT"></button>
+  <button class="lang-btn" onclick="setLang('ro')" title="Română"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f7-1f1f4.svg" width="28" height="20" alt="RO"></button>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-logo">🎲 JeromeIbiza</a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link" data-t="nav_bonus">🎁 Bonus</a>
+    <a href="about.html" class="nav-link" data-t="nav_story">👤 Ma Story</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <!-- CASINO HERO -->
+  <div class="casino-hero">
+    <div class="casino-logo">🎲</div>
+    <div>
+      <div class="casino-name">BETIFY</div>
+      <div class="casino-tags">
+        <span class="tag green">✅ Licence Curaçao</span>
+        <span class="tag">🎰 10 000+ jeux</span>
+        <span class="tag">⚡ Crypto-friendly</span>
+        <span class="tag">⚽ Sports & Esports</span>
+        <span class="tag gold">⭐ Partenaire JeromeIbiza</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTE DE JEROME -->
+  <div class="jerome-note">
+    <div class="jerome-avatar">🎲</div>
+    <div class="jerome-text" data-t="jerome_note">
+      <strong>JeromeIbiza :</strong> « Betify fait partie de mes partenaires de confiance. Casino crypto-friendly, interface propre, et un service client réactif. Utilisez le code <strong>MOON</strong> pour les Free Spins et <strong>MOONSPORT</strong> pour le freebet sport — ce sont mes codes exclusifs. »
+    </div>
+  </div>
+
+  <!-- BONUS EXCLUSIF -->
+  <div class="section-label" data-t="label_bonus">🎁 Bonus exclusif JeromeIbiza</div>
+  <div class="bonus-box">
+    <div class="bonus-title" data-t="bonus_title">🎰 Offre Casino — Code <span class="code-tag">MOON</span></div>
+    <div class="bonus-items">
+      <div class="bonus-item" data-t="bonus1">Dépôt <strong>20€ → 40 Free Spins</strong> sans wager sur WANTED</div>
+      <div class="bonus-item" data-t="bonus2">Dépôt <strong>50€ → 100 Free Spins</strong> sans wager sur WANTED</div>
+      <div class="bonus-item" data-t="bonus3">Bonus casino <strong>100% jusqu'à 500€</strong> sur 1er dépôt</div>
+    </div>
+    <div class="bonus-title" data-t="bonus_sport_title">⚽ Offre Sport — Code <span class="code-tag">MOONSPORT</span></div>
+    <div class="bonus-items">
+      <div class="bonus-item" data-t="bonus4">Freebet <strong>50% du 1er dépôt</strong> jusqu'à 100€</div>
+    </div>
+    <a href="https://record.betify.partners/_3zudlUxeY0vqaEn2LeVpkWNd7ZgqdRLk/10/" class="btn-cta cyan" target="_blank" data-t="cta_btn">🎁 Réclamer mon bonus Betify</a>
+  </div>
+
+  <!-- CONDITIONS DU BONUS -->
+  <div class="section-label" data-t="label_conditions">📋 Conditions du bonus</div>
+  <div class="card">
+    <table class="cond-table">
+      <tr><td data-t="cond_mindep">Dépôt minimum</td><td>20€</td></tr>
+      <tr><td data-t="cond_wager">Wagering (mise requise)</td><td data-t="cond_wager_val">35× (bonus + dépôt)</td></tr>
+      <tr><td data-t="cond_fs">Free Spins</td><td data-t="cond_fs_val">Sans wager ✅</td></tr>
+      <tr><td data-t="cond_maxwin_fs">Gain max Free Spins</td><td>100€</td></tr>
+      <tr><td data-t="cond_maxbet">Mise max avec bonus</td><td style="color:#FCA5A5;font-weight:900;">⚠️ 5€ / mise</td></tr>
+      <tr><td data-t="cond_delay">Délai pour compléter</td><td data-t="cond_delay_val">14 jours</td></tr>
+      <tr><td data-t="cond_activation">Activation du bonus</td><td data-t="cond_activation_val">Dans les 24h</td></tr>
+      <tr><td data-t="cond_slots">Contribution slots</td><td>100%</td></tr>
+      <tr><td data-t="cond_table_games">Contribution jeux de table</td><td>5%</td></tr>
+      <tr><td data-t="cond_live">Contribution live casino</td><td>5%</td></tr>
+      <tr><td data-t="cond_jackpot">Jackpots progressifs</td><td data-t="cond_jackpot_val" style="color:#FCA5A5;">⚠️ Exclus</td></tr>
+      <tr><td data-t="cond_withdraw">Retrait maximum mensuel</td><td>1 500€</td></tr>
+    </table>
+    <!-- AVERTISSEMENT MISE MAX -->
+    <div style="background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.35);border-radius:10px;padding:0.9rem 1rem;margin-top:1rem;font-size:0.83rem;" data-t="warning_maxbet">
+      ⚠️ <strong style="color:#FCA5A5;">Attention mise maximum</strong> — Tant qu'un bonus est actif, la mise maximale autorisée est de <strong style="color:#fff">5€ par tour</strong>. Toute mise supérieure peut entraîner l'annulation du bonus et des gains associés. Respectez cette limite pour ne pas perdre votre bonus.
+    </div>
+  </div>
+
+  <!-- PRESENTATION -->
+  <div class="section-label" data-t="label_presentation">🏠 Présentation de Betify</div>
+  <div class="card">
+    <p data-t="presentation_text" style="font-size:0.9rem;color:var(--text-muted);line-height:1.8;">
+      <strong style="color:#fff">Betify</strong> est une plateforme de casino en ligne et de paris sportifs fondée par <strong style="color:#fff">Altacore N.V.</strong>, sous licence <strong style="color:#fff">Curaçao eGaming</strong>. Lancée pour combiner casino, sports et esports sous un même toit, Betify propose plus de <strong style="color:#fff">10 000 jeux</strong> alimentés par 87 fournisseurs dont Microgaming, Play'n GO, NetEnt et Yggdrasil.
+      <br><br>
+      La plateforme se distingue par son excellent support <strong style="color:#fff">crypto</strong> (Bitcoin, Ethereum, stablecoins), ses retraits rapides sous 24-48h, et son programme <strong style="color:#fff">VIP à 18 niveaux</strong> basé sur un système de "Bytes" (monnaie fidélité). Le cashback hebdomadaire automatique pouvant atteindre <strong style="color:#fff">20%</strong> en fait un choix de qualité pour les joueurs réguliers.
+      <br><br>
+      Betify dispose également d'un partenariat avec <strong style="color:#fff">Floyd Mayweather</strong> et d'une section esports complète, ce qui le différencie des casinos classiques.
+    </p>
+  </div>
+
+  <!-- NOTE & AVIS -->
+  <div class="section-label" data-t="label_rating">⭐ Notre avis</div>
+  <div class="rating-grid" style="margin-bottom:0.75rem;">
+    <div class="rating-item">
+      <div class="rating-num">4.7</div>
+      <div class="stars">★★★★★</div>
+      <div class="rating-label" data-t="rating_overall">Note générale</div>
+    </div>
+    <div class="rating-item">
+      <div class="rating-num">5/5</div>
+      <div class="stars">★★★★★</div>
+      <div class="rating-label" data-t="rating_bonus">Bonus</div>
+    </div>
+    <div class="rating-item">
+      <div class="rating-num">4/5</div>
+      <div class="stars">★★★★☆</div>
+      <div class="rating-label" data-t="rating_games">Jeux</div>
+    </div>
+    <div class="rating-item">
+      <div class="rating-num">4.5/5</div>
+      <div class="stars">★★★★★</div>
+      <div class="rating-label" data-t="rating_support">Support</div>
+    </div>
+  </div>
+
+  <!-- PROS & CONS -->
+  <div class="pros-cons">
+    <div class="pros">
+      <div class="pros-title" data-t="pros_title">✅ Points forts</div>
+      <div class="pro-item" data-t="pro1">Free Spins sans wager</div>
+      <div class="pro-item" data-t="pro2">10 000+ jeux, 87 providers</div>
+      <div class="pro-item" data-t="pro3">Retraits rapides 24-48h</div>
+      <div class="pro-item" data-t="pro4">Crypto-friendly</div>
+      <div class="pro-item" data-t="pro5">Cashback 20% hebdomadaire</div>
+      <div class="pro-item" data-t="pro6">VIP programme 18 niveaux</div>
+      <div class="pro-item" data-t="pro7">Sports & Esports inclus</div>
+    </div>
+    <div class="cons">
+      <div class="cons-title" data-t="cons_title">❌ Points faibles</div>
+      <div class="con-item" data-t="con1">Retrait mensuel limité à 1 500€</div>
+      <div class="con-item" data-t="con2">Wagering 35× sur bonus dépôt</div>
+      <div class="con-item" data-t="con3">Non disponible dans certains pays</div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section-label" data-t="label_faq">❓ FAQ — Questions fréquentes</div>
+  <div class="card" style="padding:0 1.5rem;">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" data-t="faq1_q">Betify est-il un casino fiable ? <span class="arrow">▼</span></button>
+      <div class="faq-a" data-t="faq1_a">Oui. Betify est licencié par la Curaçao eGaming Authority, utilise un chiffrement SSL et affiche une note de 4.7/5 sur Trustpilot avec plus de 3 000 avis. Les retraits sont traités sous 24-48h.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" data-t="faq2_q">Comment utiliser le code MOON ? <span class="arrow">▼</span></button>
+      <div class="faq-a" data-t="faq2_a">Inscrivez-vous via le lien JeromeIbiza, puis entrez le code <strong>MOON</strong> lors de votre premier dépôt dans la section "Code promo". Vous recevrez vos Free Spins automatiquement après validation.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" data-t="faq3_q">Les Free Spins ont-ils un wager ? <span class="arrow">▼</span></button>
+      <div class="faq-a" data-t="faq3_a">Non ! Les Free Spins obtenus avec le code MOON sont <strong>sans wager</strong> (wager-free). Les gains des spins vous appartiennent directement, sans condition de mise supplémentaire.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" data-t="faq4_q">Quels jeux contribuent au wager du bonus dépôt ? <span class="arrow">▼</span></button>
+      <div class="faq-a" data-t="faq4_a">Les slots contribuent à 100%. Les jeux de table (blackjack, roulette, baccarat), le live casino et le vidéo poker ne contribuent qu'à 5%. Pour compléter le wager rapidement, misez sur les slots.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" data-t="faq5_q">Peut-on jouer en crypto sur Betify ? <span class="arrow">▼</span></button>
+      <div class="faq-a" data-t="faq5_a">Oui, Betify est très bien adapté aux cryptos : Bitcoin, Ethereum, et autres. Les dépôts minimum en crypto sont de 50€ équivalent. Les transactions sont rapides et sécurisées.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" data-t="faq6_q">Y a-t-il un programme de fidélité ? <span class="arrow">▼</span></button>
+      <div class="faq-a" data-t="faq6_a">Oui, le programme VIP Betify compte 18 niveaux basés sur un système de "Bytes" (monnaie interne). Plus vous jouez, plus vous gagnez de Bytes et progressez dans les niveaux, avec cashback hebdomadaire automatique jusqu'à 20%.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" data-t="faq7_q">Quelle est la mise maximale autorisée avec un bonus actif ? <span class="arrow">▼</span></button>
+      <div class="faq-a" data-t="faq7_a">⚠️ <strong>5€ par tour maximum</strong> tant que votre bonus est actif. Si vous dépassez cette limite, Betify peut annuler votre bonus et tous les gains associés. Jouez avec des mises inférieures à 5€ jusqu'à ce que le wager soit complété.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" data-t="faq8_q">Les jackpots progressifs comptent-ils pour le wager ? <span class="arrow">▼</span></button>
+      <div class="faq-a" data-t="faq8_a">Non. Les jackpots progressifs sont <strong>exclus du wager</strong> chez Betify. Les mises sur ces jeux ne comptent pas pour remplir les conditions de mise. Privilégiez les slots classiques à contribution 100%.</div>
+    </div>
+  </div>
+
+  <!-- CTA FINAL -->
+  <div class="section-label" data-t="label_cta">🚀 Rejoindre Betify</div>
+  <div class="bonus-box">
+    <div style="text-align:center; margin-bottom:1rem;">
+      <div style="font-size:1.1rem;font-weight:900;color:#fff;margin-bottom:0.4rem;" data-t="cta_final_title">Profite du bonus exclusif JeromeIbiza</div>
+      <div style="font-size:0.85rem;color:var(--text-muted);" data-t="cta_final_sub">Code casino : <span class="code-tag">MOON</span> &nbsp;·&nbsp; Code sport : <span class="code-tag">MOONSPORT</span></div>
+    </div>
+    <a href="https://record.betify.partners/_3zudlUxeY0vqaEn2LeVpkWNd7ZgqdRLk/10/" class="btn-cta cyan" target="_blank" data-t="cta_btn">🎁 Je m'inscris sur Betify maintenant</a>
+    <p style="text-align:center;font-size:0.72rem;color:var(--text-muted);margin-top:0.8rem;" data-t="cta_legal">⚠️ 18+ · Jeu responsable · Joueurs Info Service : 09 74 75 13 13</p>
+  </div>
+
+  <div class="footer">© 2025 — JEROMEIBIZA &nbsp;·&nbsp; <a href="https://discord.gg/DPXxEEev4" target="_blank">Discord</a> &nbsp;·&nbsp; <a href="index.html">Tous les bonus</a></div>
+
+</div>
+
+<script>
+function toggleFaq(btn) {
+  const ans = btn.nextElementSibling;
+  const isOpen = ans.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-q').forEach(b => b.classList.remove('open'));
+  if (!isOpen) { ans.classList.add('open'); btn.classList.add('open'); }
+}
+
+const T = {
+  fr: {
+    nav_bonus:"🎁 Bonus", nav_story:"👤 Ma Story",
+    jerome_note:`<strong>JeromeIbiza :</strong> « Betify fait partie de mes partenaires de confiance. Casino crypto-friendly, interface propre, et un service client réactif. Utilisez le code <strong>MOON</strong> pour les Free Spins et <strong>MOONSPORT</strong> pour le freebet sport — ce sont mes codes exclusifs. »`,
+    label_bonus:"🎁 Bonus exclusif JeromeIbiza", bonus_title:`🎰 Offre Casino — Code <span class="code-tag">MOON</span>`,
+    bonus1:`Dépôt <strong>20€ → 40 Free Spins</strong> sans wager sur WANTED`,
+    bonus2:`Dépôt <strong>50€ → 100 Free Spins</strong> sans wager sur WANTED`,
+    bonus3:`Bonus casino <strong>100% jusqu'à 500€</strong> sur 1er dépôt`,
+    bonus_sport_title:`⚽ Offre Sport — Code <span class="code-tag">MOONSPORT</span>`,
+    bonus4:`Freebet <strong>50% du 1er dépôt</strong> jusqu'à 100€`,
+    cta_btn:"🎁 Réclamer mon bonus Betify",
+    label_conditions:"📋 Conditions du bonus",
+    cond_mindep:"Dépôt minimum", cond_wager:"Wagering (mise requise)", cond_wager_val:"35× (bonus + dépôt)",
+    cond_fs:"Free Spins", cond_fs_val:"Sans wager ✅", cond_delay:"Délai pour compléter", cond_delay_val:"14 jours",
+    cond_slots:"Contribution slots", cond_table_games:"Contribution jeux de table", cond_live:"Contribution live casino", cond_withdraw:"Retrait maximum mensuel",
+    label_presentation:"🏠 Présentation de Betify",
+    presentation_text:`<strong style="color:#fff">Betify</strong> est une plateforme de casino en ligne et de paris sportifs fondée par <strong style="color:#fff">Altacore N.V.</strong>, sous licence <strong style="color:#fff">Curaçao eGaming</strong>. Lancée pour combiner casino, sports et esports sous un même toit, Betify propose plus de <strong style="color:#fff">10 000 jeux</strong> alimentés par 87 fournisseurs dont Microgaming, Play'n GO, NetEnt et Yggdrasil.<br><br>La plateforme se distingue par son excellent support <strong style="color:#fff">crypto</strong>, ses retraits rapides sous 24-48h, et son programme <strong style="color:#fff">VIP à 18 niveaux</strong>. Le cashback hebdomadaire automatique pouvant atteindre <strong style="color:#fff">20%</strong> en fait un choix de qualité pour les joueurs réguliers. Betify dispose également d'un partenariat avec <strong style="color:#fff">Floyd Mayweather</strong> et d'une section esports complète.`,
+    label_rating:"⭐ Notre avis",
+    rating_overall:"Note générale", rating_bonus:"Bonus", rating_games:"Jeux", rating_support:"Support",
+    pros_title:"✅ Points forts", cons_title:"❌ Points faibles",
+    pro1:"Free Spins sans wager", pro2:"10 000+ jeux, 87 providers", pro3:"Retraits rapides 24-48h",
+    pro4:"Crypto-friendly", pro5:"Cashback 20% hebdomadaire", pro6:"VIP programme 18 niveaux", pro7:"Sports & Esports inclus",
+    con1:"Retrait mensuel limité à 1 500€", con2:"Wagering 35× sur bonus dépôt", con3:"Non disponible dans certains pays",
+    label_faq:"❓ FAQ — Questions fréquentes",
+    faq1_q:"Betify est-il un casino fiable ? <span class='arrow'>▼</span>",
+    faq1_a:"Oui. Betify est licencié par la Curaçao eGaming Authority, utilise un chiffrement SSL et affiche une note de 4.7/5 sur Trustpilot avec plus de 3 000 avis.",
+    faq2_q:"Comment utiliser le code MOON ? <span class='arrow'>▼</span>",
+    faq2_a:"Inscrivez-vous via le lien JeromeIbiza, entrez le code <strong>MOON</strong> lors de votre premier dépôt. Vos Free Spins sont crédités automatiquement.",
+    faq3_q:"Les Free Spins ont-ils un wager ? <span class='arrow'>▼</span>",
+    faq3_a:"Non ! Les Free Spins obtenus avec le code MOON sont <strong>sans wager</strong>. Les gains vous appartiennent directement.",
+    faq4_q:"Quels jeux contribuent au wager ? <span class='arrow'>▼</span>",
+    faq4_a:"Les slots contribuent à 100%. Les jeux de table et le live casino ne contribuent qu'à 5%. Misez sur les slots pour compléter le wager rapidement.",
+    faq5_q:"Peut-on jouer en crypto sur Betify ? <span class='arrow'>▼</span>",
+    faq5_a:"Oui, Bitcoin, Ethereum et autres cryptos sont supportés. Les dépôts minimum en crypto sont de 50€ équivalent.",
+    faq6_q:"Y a-t-il un programme de fidélité ? <span class='arrow'>▼</span>",
+    faq6_a:"Oui, 18 niveaux VIP basés sur les 'Bytes'. Cashback hebdomadaire automatique jusqu'à 20%.",
+    label_cta:"🚀 Rejoindre Betify",
+    cta_final_title:"Profite du bonus exclusif JeromeIbiza",
+    cta_final_sub:`Code casino : <span class="code-tag">MOON</span> &nbsp;·&nbsp; Code sport : <span class="code-tag">MOONSPORT</span>`,
+    cta_btn2:"🎁 Je m'inscris sur Betify maintenant",
+    cta_legal:"⚠️ 18+ · Jeu responsable · Joueurs Info Service : 09 74 75 13 13",
+  },
+  en: {
+    nav_bonus:"🎁 Bonuses", nav_story:"👤 My Story",
+    jerome_note:`<strong>JeromeIbiza:</strong> "Betify is one of my trusted partners. Crypto-friendly casino, clean interface, and responsive support. Use code <strong>MOON</strong> for Free Spins and <strong>MOONSPORT</strong> for the sports freebet — these are my exclusive codes."`,
+    label_bonus:"🎁 JeromeIbiza Exclusive Bonus", bonus_title:`🎰 Casino Offer — Code <span class="code-tag">MOON</span>`,
+    bonus1:`Deposit <strong>€20 → 40 Free Spins</strong> wager-free on WANTED`,
+    bonus2:`Deposit <strong>€50 → 100 Free Spins</strong> wager-free on WANTED`,
+    bonus3:`Casino bonus <strong>100% up to €500</strong> on 1st deposit`,
+    bonus_sport_title:`⚽ Sports Offer — Code <span class="code-tag">MOONSPORT</span>`,
+    bonus4:`Freebet <strong>50% of 1st deposit</strong> up to €100`,
+    cta_btn:"🎁 Claim my Betify bonus",
+    label_conditions:"📋 Bonus conditions",
+    cond_mindep:"Minimum deposit", cond_wager:"Wagering requirement", cond_wager_val:"35× (bonus + deposit)",
+    cond_fs:"Free Spins", cond_fs_val:"Wager-free ✅", cond_delay:"Time to complete", cond_delay_val:"14 days",
+    cond_slots:"Slots contribution", cond_table_games:"Table games contribution", cond_live:"Live casino contribution", cond_withdraw:"Monthly max withdrawal",
+    label_presentation:"🏠 About Betify",
+    presentation_text:`<strong style="color:#fff">Betify</strong> is an online casino and sports betting platform founded by <strong style="color:#fff">Altacore N.V.</strong>, licensed under <strong style="color:#fff">Curaçao eGaming</strong>. Built to combine casino, sports and esports under one roof, Betify offers over <strong style="color:#fff">10,000 games</strong> from 87 providers including Microgaming, Play'n GO, NetEnt and Yggdrasil.<br><br>The platform stands out for its excellent <strong style="color:#fff">crypto</strong> support, fast withdrawals in 24-48h, and <strong style="color:#fff">18-level VIP program</strong>. The automatic weekly cashback of up to <strong style="color:#fff">20%</strong> makes it a quality choice for regular players. Betify also has a partnership with <strong style="color:#fff">Floyd Mayweather</strong> and a full esports section.`,
+    label_rating:"⭐ Our review",
+    rating_overall:"Overall score", rating_bonus:"Bonus", rating_games:"Games", rating_support:"Support",
+    pros_title:"✅ Pros", cons_title:"❌ Cons",
+    pro1:"Wager-free Free Spins", pro2:"10,000+ games, 87 providers", pro3:"Fast withdrawals 24-48h",
+    pro4:"Crypto-friendly", pro5:"20% weekly cashback", pro6:"18-level VIP program", pro7:"Sports & Esports included",
+    con1:"Monthly withdrawal limited to €1,500", con2:"35× wagering on deposit bonus", con3:"Not available in all countries",
+    label_faq:"❓ FAQ — Frequently asked questions",
+    faq1_q:"Is Betify a trustworthy casino? <span class='arrow'>▼</span>",
+    faq1_a:"Yes. Betify is licensed by the Curaçao eGaming Authority, uses SSL encryption and has a 4.7/5 rating on Trustpilot with 3,000+ reviews.",
+    faq2_q:"How do I use code MOON? <span class='arrow'>▼</span>",
+    faq2_a:"Sign up via the JeromeIbiza link, enter code <strong>MOON</strong> on your first deposit. Your Free Spins are credited automatically.",
+    faq3_q:"Do the Free Spins have a wagering requirement? <span class='arrow'>▼</span>",
+    faq3_a:"No! The Free Spins with code MOON are <strong>wager-free</strong>. Your winnings are yours to keep directly.",
+    faq4_q:"Which games contribute to the wagering? <span class='arrow'>▼</span>",
+    faq4_a:"Slots contribute 100%. Table games and live casino only contribute 5%. Focus on slots to clear the wagering quickly.",
+    faq5_q:"Can I play with crypto on Betify? <span class='arrow'>▼</span>",
+    faq5_a:"Yes, Bitcoin, Ethereum and other cryptos are supported. Minimum crypto deposit is €50 equivalent.",
+    faq6_q:"Is there a loyalty program? <span class='arrow'>▼</span>",
+    faq6_a:"Yes, 18 VIP levels based on 'Bytes'. Automatic weekly cashback up to 20%.",
+    label_cta:"🚀 Join Betify",
+    cta_final_title:"Claim the JeromeIbiza exclusive bonus",
+    cta_final_sub:`Casino code: <span class="code-tag">MOON</span> &nbsp;·&nbsp; Sports code: <span class="code-tag">MOONSPORT</span>`,
+    cta_btn2:"🎁 Sign up on Betify now",
+    cta_legal:"⚠️ 18+ · Responsible gambling · GamCare: 0808 8020 133",
+  },
+  de: {
+    nav_bonus:"🎁 Boni", nav_story:"👤 Meine Story",
+    jerome_note:`<strong>JeromeIbiza:</strong> „Betify ist einer meiner vertrauenswürdigen Partner. Krypto-freundliches Casino, saubere Oberfläche und reaktionsschneller Support. Benutzen Sie Code <strong>MOON</strong> für Free Spins und <strong>MOONSPORT</strong> für die Sports-Freebet."`,
+    label_bonus:"🎁 Exklusiver JeromeIbiza-Bonus", bonus_title:`🎰 Casino-Angebot — Code <span class="code-tag">MOON</span>`,
+    bonus1:`Einzahlung <strong>20€ → 40 Free Spins</strong> ohne Umsatzbedingung auf WANTED`,
+    bonus2:`Einzahlung <strong>50€ → 100 Free Spins</strong> ohne Umsatzbedingung auf WANTED`,
+    bonus3:`Casino-Bonus <strong>100% bis zu 500€</strong> auf 1. Einzahlung`,
+    bonus_sport_title:`⚽ Sport-Angebot — Code <span class="code-tag">MOONSPORT</span>`,
+    bonus4:`Freebet <strong>50% der 1. Einzahlung</strong> bis zu 100€`,
+    cta_btn:"🎁 Meinen Betify-Bonus beanspruchen",
+    label_conditions:"📋 Bonusbedingungen",
+    cond_mindep:"Mindesteinzahlung", cond_wager:"Umsatzbedingung", cond_wager_val:"35× (Bonus + Einzahlung)",
+    cond_fs:"Free Spins", cond_fs_val:"Ohne Umsatz ✅", cond_delay:"Zeit zum Erfüllen", cond_delay_val:"14 Tage",
+    cond_slots:"Slots-Beitrag", cond_table_games:"Tischspiele-Beitrag", cond_live:"Live-Casino-Beitrag", cond_withdraw:"Monatliches Max-Auszahlung",
+    label_presentation:"🏠 Über Betify",
+    presentation_text:`<strong style="color:#fff">Betify</strong> ist eine Online-Casino- und Sportwettenplattform von <strong style="color:#fff">Altacore N.V.</strong> mit <strong style="color:#fff">Curaçao-Lizenz</strong>. Die Plattform bietet über <strong style="color:#fff">10.000 Spiele</strong> von 87 Anbietern. Besonders stark: Krypto-Support, schnelle Auszahlungen und ein <strong style="color:#fff">18-stufiges VIP-Programm</strong> mit bis zu 20% wöchentlichem Cashback.`,
+    label_rating:"⭐ Unser Urteil",
+    rating_overall:"Gesamtnote", rating_bonus:"Bonus", rating_games:"Spiele", rating_support:"Support",
+    pros_title:"✅ Vorteile", cons_title:"❌ Nachteile",
+    pro1:"Free Spins ohne Umsatz", pro2:"10.000+ Spiele, 87 Anbieter", pro3:"Schnelle Auszahlungen 24-48h",
+    pro4:"Krypto-freundlich", pro5:"20% wöchentlicher Cashback", pro6:"18-stufiges VIP", pro7:"Sport & Esports inklusive",
+    con1:"Monatliche Auszahlung max. 1.500€", con2:"35× Umsatz auf Einzahlungsbonus", con3:"Nicht in allen Ländern verfügbar",
+    label_faq:"❓ FAQ",
+    faq1_q:"Ist Betify ein seriöses Casino? <span class='arrow'>▼</span>", faq1_a:"Ja. Betify hat eine Curaçao-Lizenz, SSL-Verschlüsselung und 4,7/5 auf Trustpilot.",
+    faq2_q:"Wie nutze ich Code MOON? <span class='arrow'>▼</span>", faq2_a:"Registrieren Sie sich über den JeromeIbiza-Link und geben Sie Code <strong>MOON</strong> bei Ihrer ersten Einzahlung ein.",
+    faq3_q:"Haben die Free Spins Umsatzbedingungen? <span class='arrow'>▼</span>", faq3_a:"Nein! Die Free Spins mit Code MOON sind <strong>ohne Umsatzbedingung</strong>.",
+    faq4_q:"Welche Spiele zählen zum Umsatz? <span class='arrow'>▼</span>", faq4_a:"Slots zu 100%, Tischspiele und Live-Casino nur 5%.",
+    faq5_q:"Kann ich mit Krypto spielen? <span class='arrow'>▼</span>", faq5_a:"Ja, Bitcoin und Ethereum werden unterstützt. Mindesteinzahlung 50€ äquivalent.",
+    faq6_q:"Gibt es ein Treueprogramm? <span class='arrow'>▼</span>", faq6_a:"Ja, 18 VIP-Stufen mit automatischem wöchentlichen Cashback bis zu 20%.",
+    label_cta:"🚀 Betify beitreten",
+    cta_final_title:"Hol dir den exklusiven JeromeIbiza-Bonus",
+    cta_final_sub:`Casino-Code: <span class="code-tag">MOON</span> &nbsp;·&nbsp; Sport-Code: <span class="code-tag">MOONSPORT</span>`,
+    cta_btn2:"🎁 Jetzt bei Betify anmelden",
+    cta_legal:"⚠️ 18+ · Verantwortungsvolles Spielen · BZgA: 0800 1372700",
+  },
+  es: {
+    nav_bonus:"🎁 Bonos", nav_story:"👤 Mi Historia",
+    jerome_note:`<strong>JeromeIbiza:</strong> «Betify es uno de mis socios de confianza. Casino crypto-friendly, interfaz limpia y soporte reactivo. Usa el código <strong>MOON</strong> para los Free Spins y <strong>MOONSPORT</strong> para el freebet deportivo.»`,
+    label_bonus:"🎁 Bono exclusivo JeromeIbiza", bonus_title:`🎰 Oferta Casino — Código <span class="code-tag">MOON</span>`,
+    bonus1:`Depósito <strong>20€ → 40 Giros Gratis</strong> sin wager en WANTED`,
+    bonus2:`Depósito <strong>50€ → 100 Giros Gratis</strong> sin wager en WANTED`,
+    bonus3:`Bono casino <strong>100% hasta 500€</strong> en 1er depósito`,
+    bonus_sport_title:`⚽ Oferta Deporte — Código <span class="code-tag">MOONSPORT</span>`,
+    bonus4:`Freebet <strong>50% del 1er depósito</strong> hasta 100€`,
+    cta_btn:"🎁 Reclamar mi bono Betify",
+    label_conditions:"📋 Condiciones del bono",
+    cond_mindep:"Depósito mínimo", cond_wager:"Requisito de apuesta", cond_wager_val:"35× (bono + depósito)",
+    cond_fs:"Giros Gratis", cond_fs_val:"Sin wager ✅", cond_delay:"Tiempo para completar", cond_delay_val:"14 días",
+    cond_slots:"Contribución slots", cond_table_games:"Contribución mesas", cond_live:"Contribución live", cond_withdraw:"Retiro mensual máximo",
+    label_presentation:"🏠 Sobre Betify",
+    presentation_text:`<strong style="color:#fff">Betify</strong> es una plataforma de casino online y apuestas deportivas de <strong style="color:#fff">Altacore N.V.</strong> con licencia <strong style="color:#fff">Curaçao</strong>. Ofrece más de <strong style="color:#fff">10.000 juegos</strong> de 87 proveedores. Destaca por su soporte crypto, retiros rápidos y programa <strong style="color:#fff">VIP de 18 niveles</strong> con cashback semanal de hasta 20%.`,
+    label_rating:"⭐ Nuestra opinión",
+    rating_overall:"Puntuación general", rating_bonus:"Bono", rating_games:"Juegos", rating_support:"Soporte",
+    pros_title:"✅ Puntos fuertes", cons_title:"❌ Puntos débiles",
+    pro1:"Giros sin wager", pro2:"10.000+ juegos, 87 proveedores", pro3:"Retiros rápidos 24-48h",
+    pro4:"Crypto-friendly", pro5:"Cashback 20% semanal", pro6:"VIP 18 niveles", pro7:"Deportes & Esports incluidos",
+    con1:"Retiro mensual máximo 1.500€", con2:"Wager 35× en bono depósito", con3:"No disponible en todos los países",
+    label_faq:"❓ Preguntas frecuentes",
+    faq1_q:"¿Es Betify un casino fiable? <span class='arrow'>▼</span>", faq1_a:"Sí. Licencia Curaçao, SSL y 4,7/5 en Trustpilot con más de 3.000 reseñas.",
+    faq2_q:"¿Cómo uso el código MOON? <span class='arrow'>▼</span>", faq2_a:"Regístrate por el enlace JeromeIbiza e introduce el código <strong>MOON</strong> en tu primer depósito.",
+    faq3_q:"¿Los Giros Gratis tienen wager? <span class='arrow'>▼</span>", faq3_a:"¡No! Los Giros Gratis con código MOON son <strong>sin wager</strong>.",
+    faq4_q:"¿Qué juegos contribuyen al wager? <span class='arrow'>▼</span>", faq4_a:"Slots al 100%, mesas y live solo al 5%.",
+    faq5_q:"¿Puedo jugar con crypto? <span class='arrow'>▼</span>", faq5_a:"Sí, Bitcoin y Ethereum soportados. Mínimo 50€ equivalente.",
+    faq6_q:"¿Hay programa de fidelidad? <span class='arrow'>▼</span>", faq6_a:"Sí, 18 niveles VIP con cashback semanal automático hasta 20%.",
+    label_cta:"🚀 Unirse a Betify",
+    cta_final_title:"Aprovecha el bono exclusivo JeromeIbiza",
+    cta_final_sub:`Código casino: <span class="code-tag">MOON</span> &nbsp;·&nbsp; Código deporte: <span class="code-tag">MOONSPORT</span>`,
+    cta_btn2:"🎁 Me registro en Betify ahora",
+    cta_legal:"⚠️ 18+ · Juego responsable · 900 200 800",
+  },
+  it: {
+    nav_bonus:"🎁 Bonus", nav_story:"👤 La Mia Storia",
+    jerome_note:`<strong>JeromeIbiza:</strong> «Betify è uno dei miei partner di fiducia. Casino crypto-friendly, interfaccia pulita e supporto reattivo. Usa il codice <strong>MOON</strong> per i Free Spin e <strong>MOONSPORT</strong> per il freebet sport.»`,
+    label_bonus:"🎁 Bonus esclusivo JeromeIbiza", bonus_title:`🎰 Offerta Casino — Codice <span class="code-tag">MOON</span>`,
+    bonus1:`Deposito <strong>20€ → 40 Free Spin</strong> senza wager su WANTED`,
+    bonus2:`Deposito <strong>50€ → 100 Free Spin</strong> senza wager su WANTED`,
+    bonus3:`Bonus casino <strong>100% fino a 500€</strong> sul 1° deposito`,
+    bonus_sport_title:`⚽ Offerta Sport — Codice <span class="code-tag">MOONSPORT</span>`,
+    bonus4:`Freebet <strong>50% del 1° deposito</strong> fino a 100€`,
+    cta_btn:"🎁 Riscatta il mio bonus Betify",
+    label_conditions:"📋 Condizioni del bonus",
+    cond_mindep:"Deposito minimo", cond_wager:"Requisito di scommessa", cond_wager_val:"35× (bonus + deposito)",
+    cond_fs:"Free Spin", cond_fs_val:"Senza wager ✅", cond_delay:"Tempo per completare", cond_delay_val:"14 giorni",
+    cond_slots:"Contributo slot", cond_table_games:"Contributo giochi da tavolo", cond_live:"Contributo live", cond_withdraw:"Prelievo mensile massimo",
+    label_presentation:"🏠 Informazioni su Betify",
+    presentation_text:`<strong style="color:#fff">Betify</strong> è una piattaforma di casino online e scommesse sportive di <strong style="color:#fff">Altacore N.V.</strong> con licenza <strong style="color:#fff">Curaçao</strong>. Offre oltre <strong style="color:#fff">10.000 giochi</strong> da 87 provider. Si distingue per il supporto crypto, prelievi veloci e programma <strong style="color:#fff">VIP a 18 livelli</strong> con cashback settimanale fino al 20%.`,
+    label_rating:"⭐ La nostra opinione",
+    rating_overall:"Voto generale", rating_bonus:"Bonus", rating_games:"Giochi", rating_support:"Supporto",
+    pros_title:"✅ Punti di forza", cons_title:"❌ Punti deboli",
+    pro1:"Free Spin senza wager", pro2:"10.000+ giochi, 87 provider", pro3:"Prelievi rapidi 24-48h",
+    pro4:"Crypto-friendly", pro5:"Cashback 20% settimanale", pro6:"VIP 18 livelli", pro7:"Sport & Esports inclusi",
+    con1:"Prelievo mensile max 1.500€", con2:"Wager 35× su bonus deposito", con3:"Non disponibile in tutti i paesi",
+    label_faq:"❓ Domande frequenti",
+    faq1_q:"Betify è un casino affidabile? <span class='arrow'>▼</span>", faq1_a:"Sì. Licenza Curaçao, SSL e 4,7/5 su Trustpilot con oltre 3.000 recensioni.",
+    faq2_q:"Come uso il codice MOON? <span class='arrow'>▼</span>", faq2_a:"Registrati tramite il link JeromeIbiza e inserisci il codice <strong>MOON</strong> al primo deposito.",
+    faq3_q:"I Free Spin hanno un wager? <span class='arrow'>▼</span>", faq3_a:"No! I Free Spin con codice MOON sono <strong>senza wager</strong>.",
+    faq4_q:"Quali giochi contribuiscono al wager? <span class='arrow'>▼</span>", faq4_a:"Le slot al 100%, i tavoli e il live solo al 5%.",
+    faq5_q:"Posso giocare con le crypto? <span class='arrow'>▼</span>", faq5_a:"Sì, Bitcoin ed Ethereum supportati. Minimo 50€ equivalente.",
+    faq6_q:"C'è un programma fedeltà? <span class='arrow'>▼</span>", faq6_a:"Sì, 18 livelli VIP con cashback settimanale automatico fino al 20%.",
+    label_cta:"🚀 Iscriviti a Betify",
+    cta_final_title:"Approfitta del bonus esclusivo JeromeIbiza",
+    cta_final_sub:`Codice casino: <span class="code-tag">MOON</span> &nbsp;·&nbsp; Codice sport: <span class="code-tag">MOONSPORT</span>`,
+    cta_btn2:"🎁 Mi iscrivo su Betify ora",
+    cta_legal:"⚠️ 18+ · Gioco responsabile · 800 558 822",
+  },
+  sv: { nav_bonus:"🎁 Bonusar", nav_story:"👤 Min Story", jerome_note:`<strong>JeromeIbiza:</strong> "Betify är en av mina betrodda partners. Kryptovänligt casino, rent gränssnitt och snabb support. Använd kod <strong>MOON</strong> för Free Spins och <strong>MOONSPORT</strong> för sportfreebet."`, label_bonus:"🎁 Exklusiv JeromeIbiza-bonus", bonus_title:`🎰 Casinoangebot — Kod <span class="code-tag">MOON</span>`, bonus1:`Insättning <strong>20€ → 40 Free Spins</strong> utan omsättningskrav på WANTED`, bonus2:`Insättning <strong>50€ → 100 Free Spins</strong> utan omsättningskrav på WANTED`, bonus3:`Casinobonus <strong>100% upp till 500€</strong> på 1:a insättning`, bonus_sport_title:`⚽ Sporterbjudande — Kod <span class="code-tag">MOONSPORT</span>`, bonus4:`Freebet <strong>50% av 1:a insättning</strong> upp till 100€`, cta_btn:"🎁 Hämta min Betify-bonus", label_conditions:"📋 Bonusvillkor", cond_mindep:"Minimiinsättning", cond_wager:"Omsättningskrav", cond_wager_val:"35× (bonus + insättning)", cond_fs:"Free Spins", cond_fs_val:"Utan omsättning ✅", cond_delay:"Tid att slutföra", cond_delay_val:"14 dagar", cond_slots:"Slots bidrag", cond_table_games:"Bordsspel bidrag", cond_live:"Live bidrag", cond_withdraw:"Månatlig max uttag", label_presentation:"🏠 Om Betify", presentation_text:`<strong style="color:#fff">Betify</strong> är ett online casino och sportbettingplattform med <strong style="color:#fff">Curaçao-licens</strong>. Erbjuder över <strong style="color:#fff">10 000 spel</strong> från 87 leverantörer med snabba uttag och <strong style="color:#fff">18-nivåers VIP</strong> med upp till 20% veckolig cashback.`, label_rating:"⭐ Vår recension", rating_overall:"Totalbetyg", rating_bonus:"Bonus", rating_games:"Spel", rating_support:"Support", pros_title:"✅ Fördelar", cons_title:"❌ Nackdelar", pro1:"Omsättningsfria Free Spins", pro2:"10 000+ spel", pro3:"Snabba uttag 24-48h", pro4:"Kryptovänlig", pro5:"20% veckolig cashback", pro6:"18-nivåers VIP", pro7:"Sport & Esports ingår", con1:"Månadsuttag max 1 500€", con2:"35× omsättning på insättningsbonus", con3:"Ej tillgänglig i alla länder", label_faq:"❓ Vanliga frågor", faq1_q:"Är Betify ett seriöst casino? <span class='arrow'>▼</span>", faq1_a:"Ja. Curaçao-licens, SSL och 4,7/5 på Trustpilot.", faq2_q:"Hur använder jag kod MOON? <span class='arrow'>▼</span>", faq2_a:"Registrera dig via JeromeIbiza-länken och ange kod <strong>MOON</strong> vid din första insättning.", faq3_q:"Har Free Spins omsättningskrav? <span class='arrow'>▼</span>", faq3_a:"Nej! Free Spins med kod MOON är <strong>utan omsättningskrav</strong>.", faq4_q:"Vilka spel bidrar till omsättningen? <span class='arrow'>▼</span>", faq4_a:"Slots 100%, bordsspel och live 5%.", faq5_q:"Kan jag spela med krypto? <span class='arrow'>▼</span>", faq5_a:"Ja, Bitcoin och Ethereum stöds.", faq6_q:"Finns det ett lojalitetsprogram? <span class='arrow'>▼</span>", faq6_a:"Ja, 18 VIP-nivåer med automatisk cashback upp till 20%.", label_cta:"🚀 Gå med i Betify", cta_final_title:"Ta del av den exklusiva JeromeIbiza-bonusen", cta_final_sub:`Casinokod: <span class="code-tag">MOON</span> &nbsp;·&nbsp; Sportkod: <span class="code-tag">MOONSPORT</span>`, cta_btn2:"🎁 Jag registrerar mig på Betify nu", cta_legal:"⚠️ 18+ · Spela ansvarsfullt · Stödlinjen: 020-819 100",
+  },
+  nl: { nav_bonus:"🎁 Bonussen", nav_story:"👤 Mijn Verhaal", jerome_note:`<strong>JeromeIbiza:</strong> "Betify is een van mijn vertrouwde partners. Crypto-vriendelijk casino, schone interface en snelle support. Gebruik code <strong>MOON</strong> voor Free Spins en <strong>MOONSPORT</strong> voor de sportfreebet."`, label_bonus:"🎁 Exclusieve JeromeIbiza-bonus", bonus_title:`🎰 Casino-aanbieding — Code <span class="code-tag">MOON</span>`, bonus1:`Storting <strong>€20 → 40 Free Spins</strong> zonder wager op WANTED`, bonus2:`Storting <strong>€50 → 100 Free Spins</strong> zonder wager op WANTED`, bonus3:`Casinobonus <strong>100% tot €500</strong> op 1e storting`, bonus_sport_title:`⚽ Sportaanbieding — Code <span class="code-tag">MOONSPORT</span>`, bonus4:`Freebet <strong>50% van 1e storting</strong> tot €100`, cta_btn:"🎁 Mijn Betify-bonus claimen", label_conditions:"📋 Bonusvoorwaarden", cond_mindep:"Minimale storting", cond_wager:"Inzetvereiste", cond_wager_val:"35× (bonus + storting)", cond_fs:"Free Spins", cond_fs_val:"Zonder wager ✅", cond_delay:"Tijd om te voltooien", cond_delay_val:"14 dagen", cond_slots:"Slots bijdrage", cond_table_games:"Tafelspelen bijdrage", cond_live:"Live bijdrage", cond_withdraw:"Maandelijks max opname", label_presentation:"🏠 Over Betify", presentation_text:`<strong style="color:#fff">Betify</strong> is een online casino en sportbettingplatform met <strong style="color:#fff">Curaçao-licentie</strong>. Biedt meer dan <strong style="color:#fff">10.000 spellen</strong> van 87 aanbieders met snelle opnames en <strong style="color:#fff">18-niveaus VIP</strong> met tot 20% wekelijkse cashback.`, label_rating:"⭐ Onze beoordeling", rating_overall:"Algemeen", rating_bonus:"Bonus", rating_games:"Spellen", rating_support:"Support", pros_title:"✅ Voordelen", cons_title:"❌ Nadelen", pro1:"Wagervrije Free Spins", pro2:"10.000+ spellen", pro3:"Snelle opnames 24-48u", pro4:"Crypto-vriendelijk", pro5:"20% wekelijkse cashback", pro6:"18-niveaus VIP", pro7:"Sport & Esports inbegrepen", con1:"Maandelijkse opname max €1.500", con2:"35× inzet op stortingsbonus", con3:"Niet beschikbaar in alle landen", label_faq:"❓ Veelgestelde vragen", faq1_q:"Is Betify een betrouwbaar casino? <span class='arrow'>▼</span>", faq1_a:"Ja. Curaçao-licentie, SSL en 4,7/5 op Trustpilot.", faq2_q:"Hoe gebruik ik code MOON? <span class='arrow'>▼</span>", faq2_a:"Registreer via de JeromeIbiza-link en voer code <strong>MOON</strong> in bij je eerste storting.", faq3_q:"Hebben de Free Spins een inzetvereiste? <span class='arrow'>▼</span>", faq3_a:"Nee! Free Spins met code MOON zijn <strong>zonder inzetvereiste</strong>.", faq4_q:"Welke spellen tellen mee voor de inzet? <span class='arrow'>▼</span>", faq4_a:"Slots 100%, tafelspelen en live slechts 5%.", faq5_q:"Kan ik met crypto spelen? <span class='arrow'>▼</span>", faq5_a:"Ja, Bitcoin en Ethereum worden ondersteund.", faq6_q:"Is er een loyaliteitsprogramma? <span class='arrow'>▼</span>", faq6_a:"Ja, 18 VIP-niveaus met automatische cashback tot 20%.", label_cta:"🚀 Word lid van Betify", cta_final_title:"Pak de exclusieve JeromeIbiza-bonus", cta_final_sub:`Casinocode: <span class="code-tag">MOON</span> &nbsp;·&nbsp; Sportcode: <span class="code-tag">MOONSPORT</span>`, cta_btn2:"🎁 Ik meld me nu aan bij Betify", cta_legal:"⚠️ 18+ · Verantwoord spelen · 0900-1090",
+  },
+  pl: { nav_bonus:"🎁 Bonusy", nav_story:"👤 Moja Historia", jerome_note:`<strong>JeromeIbiza:</strong> „Betify to jeden z moich zaufanych partnerów. Kasyno przyjazne kryptowalutom, czyty interfejs i szybkie wsparcie. Użyj kodu <strong>MOON</strong> na Free Spiny i <strong>MOONSPORT</strong> na freebet sportowy."`, label_bonus:"🎁 Ekskluzywny bonus JeromeIbiza", bonus_title:`🎰 Oferta Kasyno — Kod <span class="code-tag">MOON</span>`, bonus1:`Wpłata <strong>20€ → 40 Free Spinów</strong> bez obrotu na WANTED`, bonus2:`Wpłata <strong>50€ → 100 Free Spinów</strong> bez obrotu na WANTED`, bonus3:`Bonus kasynowy <strong>100% do 500€</strong> na 1. wpłatę`, bonus_sport_title:`⚽ Oferta Sport — Kod <span class="code-tag">MOONSPORT</span>`, bonus4:`Freebet <strong>50% 1. wpłaty</strong> do 100€`, cta_btn:"🎁 Odbieram bonus Betify", label_conditions:"📋 Warunki bonusu", cond_mindep:"Minimalna wpłata", cond_wager:"Wymagania obrotu", cond_wager_val:"35× (bonus + wpłata)", cond_fs:"Free Spiny", cond_fs_val:"Bez obrotu ✅", cond_delay:"Czas na realizację", cond_delay_val:"14 dni", cond_slots:"Udział slotów", cond_table_games:"Udział gier stołowych", cond_live:"Udział live", cond_withdraw:"Maks. wypłata miesięczna", label_presentation:"🏠 O Betify", presentation_text:`<strong style="color:#fff">Betify</strong> to platforma kasyna online i zakładów sportowych z licencją <strong style="color:#fff">Curaçao</strong>. Oferuje ponad <strong style="color:#fff">10 000 gier</strong> od 87 dostawców z szybkimi wypłatami i programem <strong style="color:#fff">VIP 18 poziomów</strong> z cashbackiem do 20%.`, label_rating:"⭐ Nasza ocena", rating_overall:"Ocena ogólna", rating_bonus:"Bonus", rating_games:"Gry", rating_support:"Wsparcie", pros_title:"✅ Zalety", cons_title:"❌ Wady", pro1:"Free Spiny bez obrotu", pro2:"10 000+ gier", pro3:"Szybkie wypłaty 24-48h", pro4:"Kryptowaluty", pro5:"20% cotygodniowy cashback", pro6:"VIP 18 poziomów", pro7:"Sport i Esports", con1:"Maks. wypłata 1 500€/mies.", con2:"Obrót 35× na bonus depozytowy", con3:"Niedostępny w niektórych krajach", label_faq:"❓ Najczęściej zadawane pytania", faq1_q:"Czy Betify to uczciwe kasyno? <span class='arrow'>▼</span>", faq1_a:"Tak. Licencja Curaçao, SSL i 4,7/5 na Trustpilot.", faq2_q:"Jak użyć kodu MOON? <span class='arrow'>▼</span>", faq2_a:"Zarejestruj się przez link JeromeIbiza i wpisz kod <strong>MOON</strong> przy pierwszej wpłacie.", faq3_q:"Czy Free Spiny mają obrót? <span class='arrow'>▼</span>", faq3_a:"Nie! Free Spiny z kodem MOON są <strong>bez obrotu</strong>.", faq4_q:"Jakie gry liczą się do obrotu? <span class='arrow'>▼</span>", faq4_a:"Sloty 100%, stoły i live tylko 5%.", faq5_q:"Czy mogę grać kryptowalutami? <span class='arrow'>▼</span>", faq5_a:"Tak, Bitcoin i Ethereum są obsługiwane.", faq6_q:"Czy jest program lojalnościowy? <span class='arrow'>▼</span>", faq6_a:"Tak, 18 poziomów VIP z automatycznym cashbackiem do 20%.", label_cta:"🚀 Dołącz do Betify", cta_final_title:"Skorzystaj z ekskluzywnego bonusu JeromeIbiza", cta_final_sub:`Kod kasyno: <span class="code-tag">MOON</span> &nbsp;·&nbsp; Kod sport: <span class="code-tag">MOONSPORT</span>`, cta_btn2:"🎁 Rejestruję się w Betify teraz", cta_legal:"⚠️ 18+ · Graj odpowiedzialnie · 801 889 880",
+  },
+  pt: { nav_bonus:"🎁 Bónus", nav_story:"👤 A Minha História", jerome_note:`<strong>JeromeIbiza:</strong> «Betify é um dos meus parceiros de confiança. Casino cripto-friendly, interface limpa e suporte reativo. Usa o código <strong>MOON</strong> para os Free Spins e <strong>MOONSPORT</strong> para o freebet desportivo.»`, label_bonus:"🎁 Bónus exclusivo JeromeIbiza", bonus_title:`🎰 Oferta Casino — Código <span class="code-tag">MOON</span>`, bonus1:`Depósito <strong>20€ → 40 Free Spins</strong> sem wager em WANTED`, bonus2:`Depósito <strong>50€ → 100 Free Spins</strong> sem wager em WANTED`, bonus3:`Bónus casino <strong>100% até 500€</strong> no 1.º depósito`, bonus_sport_title:`⚽ Oferta Desporto — Código <span class="code-tag">MOONSPORT</span>`, bonus4:`Freebet <strong>50% do 1.º depósito</strong> até 100€`, cta_btn:"🎁 Reclamar o meu bónus Betify", label_conditions:"📋 Condições do bónus", cond_mindep:"Depósito mínimo", cond_wager:"Requisito de aposta", cond_wager_val:"35× (bónus + depósito)", cond_fs:"Free Spins", cond_fs_val:"Sem wager ✅", cond_delay:"Tempo para completar", cond_delay_val:"14 dias", cond_slots:"Contribuição slots", cond_table_games:"Contribuição mesas", cond_live:"Contribuição live", cond_withdraw:"Levantamento mensal máximo", label_presentation:"🏠 Sobre o Betify", presentation_text:`<strong style="color:#fff">Betify</strong> é uma plataforma de casino online e apostas desportivas com licença <strong style="color:#fff">Curaçao</strong>. Oferece mais de <strong style="color:#fff">10.000 jogos</strong> de 87 fornecedores com levantamentos rápidos e programa <strong style="color:#fff">VIP de 18 níveis</strong> com cashback semanal até 20%.`, label_rating:"⭐ A nossa opinião", rating_overall:"Pontuação geral", rating_bonus:"Bónus", rating_games:"Jogos", rating_support:"Suporte", pros_title:"✅ Pontos fortes", cons_title:"❌ Pontos fracos", pro1:"Free Spins sem wager", pro2:"10.000+ jogos", pro3:"Levantamentos rápidos 24-48h", pro4:"Cripto-friendly", pro5:"Cashback 20% semanal", pro6:"VIP 18 níveis", pro7:"Desporto & Esports incluídos", con1:"Levantamento mensal máx. 1.500€", con2:"Wager 35× no bónus depósito", con3:"Não disponível em todos os países", label_faq:"❓ Perguntas frequentes", faq1_q:"O Betify é um casino fiável? <span class='arrow'>▼</span>", faq1_a:"Sim. Licença Curaçao, SSL e 4,7/5 no Trustpilot.", faq2_q:"Como uso o código MOON? <span class='arrow'>▼</span>", faq2_a:"Regista-te pelo link JeromeIbiza e insere o código <strong>MOON</strong> no primeiro depósito.", faq3_q:"Os Free Spins têm wager? <span class='arrow'>▼</span>", faq3_a:"Não! Os Free Spins com código MOON são <strong>sem wager</strong>.", faq4_q:"Que jogos contribuem para o wager? <span class='arrow'>▼</span>", faq4_a:"Slots 100%, mesas e live apenas 5%.", faq5_q:"Posso jogar com cripto? <span class='arrow'>▼</span>", faq5_a:"Sim, Bitcoin e Ethereum suportados.", faq6_q:"Há programa de fidelidade? <span class='arrow'>▼</span>", faq6_a:"Sim, 18 níveis VIP com cashback semanal até 20%.", label_cta:"🚀 Aderir ao Betify", cta_final_title:"Aproveita o bónus exclusivo JeromeIbiza", cta_final_sub:`Código casino: <span class="code-tag">MOON</span> &nbsp;·&nbsp; Código desporto: <span class="code-tag">MOONSPORT</span>`, cta_btn2:"🎁 Registo-me no Betify agora", cta_legal:"⚠️ 18+ · Jogo responsável · 800 200 990",
+  },
+  ro: { nav_bonus:"🎁 Bonusuri", nav_story:"👤 Povestea Mea", jerome_note:`<strong>JeromeIbiza:</strong> „Betify este unul dintre partenerii mei de încredere. Casino cripto-friendly, interfață curată și suport rapid. Folosiți codul <strong>MOON</strong> pentru Free Spins și <strong>MOONSPORT</strong> pentru freebet sport."`, label_bonus:"🎁 Bonus exclusiv JeromeIbiza", bonus_title:`🎰 Ofertă Casino — Cod <span class="code-tag">MOON</span>`, bonus1:`Depozit <strong>20€ → 40 Free Spins</strong> fără wager pe WANTED`, bonus2:`Depozit <strong>50€ → 100 Free Spins</strong> fără wager pe WANTED`, bonus3:`Bonus casino <strong>100% până la 500€</strong> la primul depozit`, bonus_sport_title:`⚽ Ofertă Sport — Cod <span class="code-tag">MOONSPORT</span>`, bonus4:`Freebet <strong>50% din primul depozit</strong> până la 100€`, cta_btn:"🎁 Revendic bonusul meu Betify", label_conditions:"📋 Condițiile bonusului", cond_mindep:"Depozit minim", cond_wager:"Cerința de rulaj", cond_wager_val:"35× (bonus + depozit)", cond_fs:"Free Spins", cond_fs_val:"Fără wager ✅", cond_delay:"Timp pentru completare", cond_delay_val:"14 zile", cond_slots:"Contribuție sloturi", cond_table_games:"Contribuție jocuri de masă", cond_live:"Contribuție live", cond_withdraw:"Retragere lunară maximă", label_presentation:"🏠 Despre Betify", presentation_text:`<strong style="color:#fff">Betify</strong> este o platformă de casino online și pariuri sportive cu licență <strong style="color:#fff">Curaçao</strong>. Oferă peste <strong style="color:#fff">10.000 de jocuri</strong> de la 87 furnizori cu retrageri rapide și program <strong style="color:#fff">VIP cu 18 niveluri</strong> cu cashback săptămânal de până la 20%.`, label_rating:"⭐ Părera noastră", rating_overall:"Scor general", rating_bonus:"Bonus", rating_games:"Jocuri", rating_support:"Suport", pros_title:"✅ Puncte forte", cons_title:"❌ Puncte slabe", pro1:"Free Spins fără wager", pro2:"10.000+ jocuri", pro3:"Retrageri rapide 24-48h", pro4:"Cripto-friendly", pro5:"Cashback 20% săptămânal", pro6:"VIP 18 niveluri", pro7:"Sport & Esports incluse", con1:"Retragere lunară max 1.500€", con2:"Rulaj 35× pe bonusul depozit", con3:"Indisponibil în toate țările", label_faq:"❓ Întrebări frecvente", faq1_q:"Betify este un casino de încredere? <span class='arrow'>▼</span>", faq1_a:"Da. Licență Curaçao, SSL și 4,7/5 pe Trustpilot.", faq2_q:"Cum folosesc codul MOON? <span class='arrow'>▼</span>", faq2_a:"Înregistrează-te prin linkul JeromeIbiza și introdu codul <strong>MOON</strong> la primul depozit.", faq3_q:"Free Spins au cerință de rulaj? <span class='arrow'>▼</span>", faq3_a:"Nu! Free Spins cu codul MOON sunt <strong>fără rulaj</strong>.", faq4_q:"Ce jocuri contribuie la rulaj? <span class='arrow'>▼</span>", faq4_a:"Sloturile 100%, mesele și live-ul doar 5%.", faq5_q:"Pot juca cu cripto? <span class='arrow'>▼</span>", faq5_a:"Da, Bitcoin și Ethereum sunt suportate.", faq6_q:"Există un program de fidelitate? <span class='arrow'>▼</span>", faq6_a:"Da, 18 niveluri VIP cu cashback automat până la 20%.", label_cta:"🚀 Alătură-te la Betify", cta_final_title:"Profită de bonusul exclusiv JeromeIbiza", cta_final_sub:`Cod casino: <span class="code-tag">MOON</span> &nbsp;·&nbsp; Cod sport: <span class="code-tag">MOONSPORT</span>`, cta_btn2:"🎁 Mă înregistrez pe Betify acum", cta_legal:"⚠️ 18+ · Joc responsabil · 0800 800 820",
+  },
+};
+
+function setLang(lang) {
+  const d = T[lang]; if (!d) return;
+  document.querySelectorAll('[data-t]').forEach(el => {
+    const k = el.getAttribute('data-t');
+    if (d[k] !== undefined) el.innerHTML = d[k];
+  });
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
+  document.documentElement.lang = lang;
+}
+</script>
+</body>
+</html>
