@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Megadice Casino — Avis complet, bonus exclusif 200% + 50 Free Spins, conditions, FAQ. Présentation par JeromeIbiza.">
+<title>Megadice Casino — Avis & Bonus 200% | JeromeIbiza</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cyan: #00D4FF; --bg-top: #0D1B3E; --bg-mid: #1A1050; --bg-bot: #2D1B69;
+    --card-bg: rgba(255,255,255,0.06); --card-border: rgba(0,212,255,0.25);
+    --text: #FFFFFF; --text-muted: rgba(255,255,255,0.65); --btn-cyan: #00C8F0;
+    --badge-bg: rgba(0,212,255,0.18); --gold: #FFD700; --gold-dim: rgba(255,215,0,0.12);
+    --purple: #8B5CF6; --purple-dim: rgba(139,92,246,0.15);
+    --green: #22C55E; --green-dim: rgba(34,197,94,0.1);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { background:linear-gradient(160deg,var(--bg-top) 0%,var(--bg-mid) 40%,var(--bg-bot) 100%); min-height:100vh; color:var(--text); font-family:'Nunito',sans-serif; font-weight:600; line-height:1.5; overflow-x:hidden; }
+  body::before { content:''; position:fixed; inset:0; background-image:radial-gradient(1px 1px at 10% 15%,rgba(255,255,255,0.5) 0%,transparent 100%),radial-gradient(1px 1px at 55% 25%,rgba(255,255,255,0.4) 0%,transparent 100%),radial-gradient(1px 1px at 75% 80%,rgba(255,255,255,0.3) 0%,transparent 100%); pointer-events:none; z-index:0; }
+
+  .lang-bar { position:relative; z-index:10; display:flex; justify-content:center; flex-wrap:wrap; gap:0.4rem; padding:0.6rem 1.2rem 0; }
+  .lang-btn { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:8px; padding:0.3rem 0.5rem; cursor:pointer; transition:background 0.2s,border-color 0.2s,transform 0.1s; line-height:1; display:flex; align-items:center; }
+  .lang-btn:hover { background:rgba(255,255,255,0.14); border-color:var(--purple); }
+  .lang-btn.active { background:var(--purple-dim); border-color:var(--purple); transform:scale(1.1); }
+
+  nav { position:relative; z-index:10; display:flex; align-items:center; justify-content:space-between; padding:1rem 1.5rem; border-bottom:1px solid rgba(0,212,255,0.1); backdrop-filter:blur(10px); }
+  .nav-logo { font-size:1rem; font-weight:900; letter-spacing:0.08em; color:#fff; text-decoration:none; text-transform:uppercase; }
+  .nav-links { display:flex; gap:0.75rem; }
+  .nav-link { font-size:0.82rem; font-weight:800; color:var(--text-muted); text-decoration:none; letter-spacing:0.06em; text-transform:uppercase; padding:0.3rem 0.8rem; border-radius:8px; transition:color 0.2s,background 0.2s; }
+  .nav-link:hover { color:var(--purple); background:var(--purple-dim); }
+
+  .wrap { position:relative; z-index:1; max-width:820px; margin:0 auto; padding:1.5rem 1.2rem 4rem; }
+
+  .casino-hero { display:flex; align-items:center; gap:1.5rem; padding:1.5rem 0 2rem; }
+  .casino-logo { width:90px; height:90px; border-radius:16px; background:var(--purple-dim); border:2px solid rgba(139,92,246,0.5); display:flex; align-items:center; justify-content:center; font-size:2.2rem; flex-shrink:0; box-shadow:0 0 24px rgba(139,92,246,0.2); }
+  .casino-name { font-size:clamp(1.8rem,6vw,2.8rem); font-weight:900; text-transform:uppercase; letter-spacing:0.06em; color:#fff; text-shadow:0 0 24px rgba(139,92,246,0.3); }
+  .casino-tags { display:flex; flex-wrap:wrap; gap:0.4rem; margin-top:0.6rem; }
+  .tag { background:var(--badge-bg); border:1px solid var(--card-border); border-radius:999px; padding:0.2rem 0.7rem; font-size:0.7rem; font-weight:800; color:var(--cyan); letter-spacing:0.08em; text-transform:uppercase; }
+  .tag.green { background:var(--green-dim); border-color:rgba(34,197,94,0.35); color:#4ADE80; }
+  .tag.gold { background:var(--gold-dim); border-color:rgba(255,215,0,0.35); color:var(--gold); }
+  .tag.purple { background:var(--purple-dim); border-color:rgba(139,92,246,0.4); color:#C4B5FD; }
+
+  .section-label { display:flex; align-items:center; gap:0.5rem; font-size:0.78rem; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-muted); margin:2rem 0 0.8rem; }
+  .section-label::after { content:''; flex:1; height:1px; background:linear-gradient(90deg,rgba(255,255,255,0.15),transparent); }
+
+  .card { background:var(--card-bg); border:1px solid var(--card-border); border-radius:16px; padding:1.3rem 1.5rem; margin-bottom:0.75rem; backdrop-filter:blur(10px); }
+
+  .bonus-box { background:var(--purple-dim); border:1px solid rgba(139,92,246,0.5); border-radius:16px; padding:1.5rem; margin-bottom:0.75rem; position:relative; overflow:hidden; }
+  .bonus-box::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,var(--purple),transparent); }
+
+  .bonus-title { font-size:1.1rem; font-weight:900; color:#fff; margin-bottom:0.8rem; }
+  .bonus-items { display:flex; flex-direction:column; gap:0.5rem; margin-bottom:1.2rem; }
+  .bonus-item { display:flex; align-items:flex-start; gap:0.6rem; font-size:0.88rem; color:var(--text-muted); }
+  .bonus-item strong { color:#fff; }
+  .bonus-item::before { content:'✅'; flex-shrink:0; }
+
+  .milestone-box { background:rgba(0,0,0,0.2); border-radius:12px; padding:1rem; margin-bottom:1rem; }
+  .milestone-title { font-size:0.75rem; font-weight:900; color:#C4B5FD; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.6rem; }
+  .milestone-bar { display:flex; gap:0.3rem; flex-wrap:wrap; }
+  .milestone-step { background:rgba(139,92,246,0.3); border:1px solid rgba(139,92,246,0.4); border-radius:6px; padding:0.25rem 0.5rem; font-size:0.7rem; font-weight:800; color:#C4B5FD; }
+  .milestone-step.done { background:rgba(139,92,246,0.6); }
+
+  .btn-cta { display:block; width:100%; padding:1rem; border-radius:12px; font-family:'Nunito',sans-serif; font-size:1.05rem; font-weight:900; text-align:center; text-decoration:none; cursor:pointer; border:none; transition:transform 0.15s,box-shadow 0.2s,background 0.2s; letter-spacing:0.03em; margin-top:0.8rem; }
+  .btn-cta.purple { background:var(--purple); color:#fff; }
+  .btn-cta.purple:hover { background:#A78BFA; transform:translateY(-2px); box-shadow:0 6px 24px rgba(139,92,246,0.4); }
+  .code-tag { background:#0f172a; color:#C4B5FD; font-size:0.85rem; padding:0.15rem 0.6rem; border-radius:6px; font-family:monospace; font-weight:900; }
+
+  .cond-table { width:100%; border-collapse:collapse; font-size:0.85rem; }
+  .cond-table tr { border-bottom:1px solid rgba(255,255,255,0.06); }
+  .cond-table tr:last-child { border-bottom:none; }
+  .cond-table td { padding:0.6rem 0.4rem; }
+  .cond-table td:first-child { color:var(--text-muted); font-weight:700; width:55%; }
+  .cond-table td:last-child { color:#fff; font-weight:800; text-align:right; }
+
+  .promo-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:0.75rem; margin-bottom:0.75rem; }
+  .promo-card { background:var(--card-bg); border:1px solid var(--card-border); border-radius:14px; padding:1rem; text-align:center; }
+  .promo-icon { font-size:1.8rem; margin-bottom:0.4rem; }
+  .promo-title { font-size:0.82rem; font-weight:900; color:#fff; margin-bottom:0.2rem; }
+  .promo-val { font-size:0.72rem; color:var(--text-muted); line-height:1.4; }
+
+  .pros-cons { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:0.75rem; }
+  @media(max-width:480px){ .pros-cons { grid-template-columns:1fr; } }
+  .pros { background:rgba(34,197,94,0.08); border:1px solid rgba(34,197,94,0.25); border-radius:14px; padding:1rem; }
+  .cons { background:rgba(239,68,68,0.08); border:1px solid rgba(239,68,68,0.25); border-radius:14px; padding:1rem; }
+  .pros-title { font-size:0.75rem; font-weight:900; letter-spacing:0.1em; text-transform:uppercase; color:#4ADE80; margin-bottom:0.6rem; }
+  .cons-title { font-size:0.75rem; font-weight:900; letter-spacing:0.1em; text-transform:uppercase; color:#F87171; margin-bottom:0.6rem; }
+  .pro-item,.con-item { font-size:0.82rem; color:var(--text-muted); padding:0.2rem 0; }
+  .pro-item::before { content:'✅ '; }
+  .con-item::before { content:'❌ '; }
+
+  .rating-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:0.6rem; margin-bottom:0.75rem; }
+  .rating-item { background:var(--card-bg); border:1px solid var(--card-border); border-radius:12px; padding:0.8rem; text-align:center; }
+  .rating-num { font-size:1.5rem; font-weight:900; color:var(--purple); }
+  .rating-label { font-size:0.68rem; color:var(--text-muted); font-weight:700; letter-spacing:0.06em; text-transform:uppercase; margin-top:0.2rem; }
+  .stars { color:var(--gold); font-size:0.7rem; }
+
+  .faq-item { border-bottom:1px solid rgba(255,255,255,0.06); }
+  .faq-item:last-child { border-bottom:none; }
+  .faq-q { width:100%; background:none; border:none; color:#fff; font-family:'Nunito',sans-serif; font-size:0.9rem; font-weight:800; text-align:left; padding:1rem 0; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+  .faq-q .arrow { color:var(--purple); font-size:1rem; transition:transform 0.2s; flex-shrink:0; }
+  .faq-q.open .arrow { transform:rotate(180deg); }
+  .faq-a { font-size:0.84rem; color:var(--text-muted); line-height:1.7; padding-bottom:1rem; display:none; }
+  .faq-a.open { display:block; }
+
+  .jerome-note { background:var(--purple-dim); border:1px solid rgba(139,92,246,0.35); border-radius:14px; padding:1.2rem; display:flex; gap:1rem; align-items:flex-start; margin-bottom:0.75rem; }
+  .jerome-avatar { width:42px; height:42px; border-radius:50%; background:var(--purple-dim); border:2px solid var(--purple); display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0; }
+  .jerome-text { font-size:0.85rem; color:var(--text-muted); line-height:1.6; font-style:italic; }
+  .jerome-text strong { color:#C4B5FD; font-style:normal; }
+
+  .footer { text-align:center; margin-top:2rem; font-size:0.75rem; color:rgba(255,255,255,0.25); font-weight:600; }
+  .footer a { color:var(--cyan); text-decoration:none; }
+</style>
+</head>
+<body>
+
+<div class="lang-bar">
+  <button class="lang-btn active" onclick="setLang('fr')" title="Français"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1eb-1f1f7.svg" width="28" height="20" alt="FR"></button>
+  <button class="lang-btn" onclick="setLang('en')" title="English"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ec-1f1e7.svg" width="28" height="20" alt="GB"></button>
+  <button class="lang-btn" onclick="setLang('it')" title="Italiano"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ee-1f1f9.svg" width="28" height="20" alt="IT"></button>
+  <button class="lang-btn" onclick="setLang('de')" title="Deutsch"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1e9-1f1ea.svg" width="28" height="20" alt="DE"></button>
+  <button class="lang-btn" onclick="setLang('es')" title="Español"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ea-1f1f8.svg" width="28" height="20" alt="ES"></button>
+  <button class="lang-btn" onclick="setLang('sv')" title="Svenska"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f8-1f1ea.svg" width="28" height="20" alt="SE"></button>
+  <button class="lang-btn" onclick="setLang('nl')" title="Nederlands"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f3-1f1f1.svg" width="28" height="20" alt="NL"></button>
+  <button class="lang-btn" onclick="setLang('pl')" title="Polski"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1f1.svg" width="28" height="20" alt="PL"></button>
+  <button class="lang-btn" onclick="setLang('pt')" title="Português"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1f9.svg" width="28" height="20" alt="PT"></button>
+  <button class="lang-btn" onclick="setLang('ro')" title="Română"><img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f7-1f1f4.svg" width="28" height="20" alt="RO"></button>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-logo">🎲 JeromeIbiza</a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link" data-t="nav_bonus">🎁 Bonus</a>
+    <a href="about.html" class="nav-link" data-t="nav_story">👤 Ma Story</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="casino-hero">
+    <div class="casino-logo">🎲</div>
+    <div>
+      <div class="casino-name">MEGADICE</div>
+      <div class="casino-tags">
+        <span class="tag green">✅ Licence Curaçao</span>
+        <span class="tag purple">🔒 No KYC</span>
+        <span class="tag">⚡ Crypto uniquement</span>
+        <span class="tag">🎰 5 000+ jeux</span>
+        <span class="tag gold">⭐ Partenaire JeromeIbiza</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTE JEROME -->
+  <div class="jerome-note">
+    <div class="jerome-avatar">🎲</div>
+    <div class="jerome-text" data-t="jerome_note">
+      <strong>JeromeIbiza :</strong> « Megadice c'est mon coup de cœur pour le rapport bonus/liberté. No KYC, 200% sur le premier dépôt, 50 Free Spins sur WANTED — et un système de bonus progressif unique qui libère vos gains en tranches. Passez simplement par mon lien pour l'offre exclusive. »
+    </div>
+  </div>
+
+  <!-- BONUS -->
+  <div class="section-label" data-t="label_bonus">🎁 Bonus exclusif JeromeIbiza</div>
+  <div class="bonus-box">
+    <div class="bonus-title" data-t="bonus_title">🎰 Offre de Bienvenue</div>
+    <div class="bonus-items">
+      <div class="bonus-item" data-t="b1">Bonus <strong>200%</strong> sur le 1er dépôt (jusqu'à <strong>1 BTC</strong>)</div>
+      <div class="bonus-item" data-t="b2"><strong>50 Free Spins</strong> sur WANTED Dead or a Wild</div>
+      <div class="bonus-item" data-t="b3"><strong>5$ de crédit sport</strong> offert pour tester le sportsbook</div>
+      <div class="bonus-item" data-t="b4">Dépôt minimum : <strong>20€</strong></div>
+    </div>
+
+    <!-- SYSTÈME PROGRESSIF -->
+    <div class="milestone-box">
+      <div class="milestone-title" data-t="milestone_title">⚡ Système de bonus progressif — unique chez Megadice</div>
+      <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:0.7rem;" data-t="milestone_desc">Le bonus est libéré en <strong style="color:#fff">10 tranches de 10%</strong> — chaque fois que vous misez 6× votre dépôt initial, 10% du bonus est débloqué :</p>
+      <div class="milestone-bar">
+        <div class="milestone-step done">x6 → 10%</div>
+        <div class="milestone-step done">x12 → 20%</div>
+        <div class="milestone-step">x18 → 30%</div>
+        <div class="milestone-step">x24 → 40%</div>
+        <div class="milestone-step">x30 → 50%</div>
+        <div class="milestone-step">x36 → 60%</div>
+        <div class="milestone-step">x42 → 70%</div>
+        <div class="milestone-step">x48 → 80%</div>
+        <div class="milestone-step">x54 → 90%</div>
+        <div class="milestone-step">x60 → 100%</div>
+      </div>
+    </div>
+
+    <a href="https://record.discasinoaffiliates.com/_au23hP5uLuZmcN_rcTxTOGNd7ZgqdRLk/1/" class="btn-cta purple" target="_blank" data-t="cta_btn">🎲 Réclamer mon bonus Megadice</a>
+  </div>
+
+  <!-- CONDITIONS -->
+  <div class="section-label" data-t="label_conditions">📋 Conditions du bonus</div>
+  <div class="card">
+    <table class="cond-table">
+      <tr><td data-t="cond_mindep">Dépôt minimum</td><td>20€</td></tr>
+      <tr><td data-t="cond_max">Bonus maximum</td><td>1 BTC</td></tr>
+      <tr><td data-t="cond_wager_bonus">Wager bonus dépôt</td><td>x40</td></tr>
+      <tr><td data-t="cond_wager_fs">Wager Free Spins</td><td>x35</td></tr>
+      <tr><td data-t="cond_delay_bonus">Délai bonus dépôt</td><td data-t="cond_delay_bonus_val">14 jours</td></tr>
+      <tr><td data-t="cond_delay_fs">Délai Free Spins</td><td data-t="cond_delay_fs_val" style="color:#FCA5A5;">⚠️ 7 jours seulement</td></tr>
+      <tr><td data-t="cond_maxbet">Mise max avec bonus</td><td style="color:#FCA5A5;font-weight:900;">⚠️ 5€ / mise</td></tr>
+      <tr><td data-t="cond_release">Libération du bonus</td><td data-t="cond_release_val">Tranches de 10%</td></tr>
+      <tr><td data-t="cond_kyc">KYC obligatoire</td><td data-t="cond_kyc_val" style="color:#4ADE80;">Non ✅</td></tr>
+      <tr><td data-t="cond_currency">Devise</td><td data-t="cond_currency_val">Crypto uniquement</td></tr>
+    </table>
+    <div style="background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);border-radius:10px;padding:0.9rem 1rem;margin-top:1rem;font-size:0.83rem;" data-t="warning_maxbet">
+      ⚠️ <strong style="color:#FCA5A5;">Attention :</strong> Mise maximale de <strong style="color:#fff">5€ par tour</strong> tant que le bonus est actif. Toute mise supérieure peut annuler le bonus et les gains. Les Free Spins expirent en <strong style="color:#fff">7 jours</strong> — jouez-les rapidement !
+    </div>
+  </div>
+
+  <!-- PROMOTIONS -->
+  <div class="section-label" data-t="label_promos">🏆 Promotions régulières</div>
+  <div class="promo-grid">
+    <div class="promo-card">
+      <div class="promo-icon">🎰</div>
+      <div class="promo-title" data-t="promo1_title">Saturday Slots</div>
+      <div class="promo-val" data-t="promo1_val">2 500 USDT / semaine<br>Tournoi slots</div>
+    </div>
+    <div class="promo-card">
+      <div class="promo-icon">🃏</div>
+      <div class="promo-title" data-t="promo2_title">Live Casino Sunday</div>
+      <div class="promo-val" data-t="promo2_val">2 500 USDT / semaine<br>Jeux live Evolution</div>
+    </div>
+    <div class="promo-card">
+      <div class="promo-icon">🏆</div>
+      <div class="promo-title" data-t="promo3_title">Drops & Wins</div>
+      <div class="promo-val" data-t="promo3_val">$2M / mois<br>Pragmatic Play</div>
+    </div>
+    <div class="promo-card">
+      <div class="promo-icon">⚽</div>
+      <div class="promo-title" data-t="promo4_title">Football Tournois</div>
+      <div class="promo-val" data-t="promo4_val">100 000$+<br>Saison football</div>
+    </div>
+  </div>
+
+  <!-- PRESENTATION -->
+  <div class="section-label" data-t="label_presentation">🏠 Présentation de Megadice</div>
+  <div class="card">
+    <p data-t="presentation_text" style="font-size:0.9rem;color:var(--text-muted);line-height:1.8;">
+      <strong style="color:#fff">Megadice</strong> est un casino crypto et sportsbook lancé en <strong style="color:#fff">2023</strong>, sous licence <strong style="color:#fff">Curaçao Gaming Control Board</strong>. En seulement deux ans, il s'est imposé comme l'une des références du secteur grâce à son approche innovante.<br><br>
+      Son atout majeur : <strong style="color:#fff">pas de KYC obligatoire</strong> pour la plupart des transactions, ce qui garantit une confidentialité maximale et des retraits en moins de 2 minutes. La plateforme propose plus de <strong style="color:#fff">5 000 jeux</strong> de 50+ providers dont Evolution Gaming, NetEnt, Pragmatic Play et Quickspin.<br><br>
+      
+    </p>
+  </div>
+
+  <!-- NOTES -->
+  <div class="section-label" data-t="label_rating">⭐ Notre avis</div>
+  <div class="rating-grid">
+    <div class="rating-item">
+      <div class="rating-num">4.4</div>
+      <div class="stars">★★★★☆</div>
+      <div class="rating-label" data-t="rating_overall">Note générale</div>
+    </div>
+    <div class="rating-item">
+      <div class="rating-num">5/5</div>
+      <div class="stars">★★★★★</div>
+      <div class="rating-label" data-t="rating_bonus">Bonus</div>
+    </div>
+    <div class="rating-item">
+      <div class="rating-num">5/5</div>
+      <div class="stars">★★★★★</div>
+      <div class="rating-label" data-t="rating_privacy">Confidentialité</div>
+    </div>
+    <div class="rating-item">
+      <div class="rating-num">4/5</div>
+      <div class="stars">★★★★☆</div>
+      <div class="rating-label" data-t="rating_games">Jeux</div>
+    </div>
+  </div>
+
+  <!-- PROS CONS -->
+  <div class="pros-cons">
+    <div class="pros">
+      <div class="pros-title" data-t="pros_title">✅ Points forts</div>
+      <div class="pro-item" data-t="pro1">No KYC — confidentialité totale</div>
+      <div class="pro-item" data-t="pro2">200% bonus jusqu'à 1 BTC</div>
+      <div class="pro-item" data-t="pro3">50 Free Spins sur WANTED</div>
+      <div class="pro-item" data-t="pro4">Retraits en moins de 2 minutes</div>
+      <div class="pro-item" data-t="pro5">5 000+ jeux, 50+ providers</div>
+      <div class="pro-item" data-t="pro6">Token $DICE avec staking</div>
+      <div class="pro-item" data-t="pro7">Intégration Telegram</div>
+    </div>
+    <div class="cons">
+      <div class="cons-title" data-t="cons_title">❌ Points faibles</div>
+      <div class="con-item" data-t="con1">Crypto uniquement</div>
+      <div class="con-item" data-t="con2">Wager 40× sur bonus dépôt</div>
+      <div class="con-item" data-t="con3">Free Spins expirent en 7 jours</div>
+      </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section-label" data-t="label_faq">❓ FAQ — Questions fréquentes</div>
+  <div class="card" style="padding:0 1.5rem;">
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" data-t="faq1_q">Comment fonctionne le système de bonus progressif ? <span class="arrow">▼</span></button>
+      <div class="faq-a" data-t="faq1_a">Le bonus 200% n'est pas disponible en une seule fois. Il est libéré en <strong>10 tranches de 10%</strong> : chaque fois que vous misez 6× votre dépôt initial, 10% supplémentaires sont débloqués. Exemple : dépôt de 100€ → bonus de 200€ → chaque fois que vous misez 600€, vous débloquez 20€ de bonus.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" data-t="faq2_q">Megadice demande-t-il une vérification d'identité ? <span class="arrow">▼</span></button>
+      <div class="faq-a" data-t="faq2_a">Non pour la plupart des transactions. Megadice est un casino <strong>No KYC</strong> — pas besoin de documents d'identité pour les dépôts et retraits standards. Un KYC peut être demandé pour des retraits très importants.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" data-t="faq3_q">Combien de temps ai-je pour utiliser les Free Spins ? <span class="arrow">▼</span></button>
+      <div class="faq-a" data-t="faq3_a">⚠️ <strong>7 jours seulement</strong> pour les Free Spins — c'est court ! Activez-les et jouez-les rapidement après votre inscription. Le bonus dépôt lui dispose de 14 jours.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" data-t="faq4_q">Quelle est la mise maximale avec un bonus actif ? <span class="arrow">▼</span></button>
+      <div class="faq-a" data-t="faq4_a">⚠️ <strong>5€ par tour maximum</strong> tant que votre bonus est actif. Dépasser cette limite peut entraîner l'annulation du bonus et des gains associés. Restez en dessous de 5€ jusqu'à la fin du wager.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" data-t="faq5_q">Quelles cryptos sont acceptées ? <span class="arrow">▼</span></button>
+      <div class="faq-a" data-t="faq5_a">Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Ripple (XRP), Tether (USDT), Dogecoin (DOGE) et 20+ autres cryptos. Dépôts et retraits traités en moins de 2 minutes.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" data-t="faq6_q">C'est quoi le token $DICE ? <span class="arrow">▼</span></button>
+      <div class="faq-a" data-t="faq6_a">$DICE est le token natif de Megadice. En le stakant, vous recevez des récompenses passives et des airdrops exclusifs. C'est une fonctionnalité unique qui permet de gagner même sans jouer.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" data-t="faq7_q">Megadice est-il accessible dans tous les pays ? <span class="arrow">▼</span></button>
+      <div class="faq-a" data-t="faq7_a">Megadice n'est pas disponible dans tous les pays. Si votre pays n'est pas supporté, un VPN est nécessaire. <strong>Lors de l'inscription, utilisez le pays correspondant à votre VPN</strong> — essentiel pour éviter tout blocage.</div>
+    </div>
+  </div>
+
+  <!-- CTA FINAL -->
+  <div class="section-label" data-t="label_cta">🚀 Rejoindre Megadice</div>
+  <div class="bonus-box" style="text-align:center;">
+    <div style="font-size:1.1rem;font-weight:900;color:#fff;margin-bottom:0.4rem;" data-t="cta_final_title">Profite du bonus exclusif JeromeIbiza</div>
+    <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.8rem;" data-t="cta_final_sub">200% + 50 Free Spins sur WANTED — via le lien JeromeIbiza</div>
+    <a href="https://record.discasinoaffiliates.com/_au23hP5uLuZmcN_rcTxTOGNd7ZgqdRLk/1/" class="btn-cta purple" target="_blank" data-t="cta_final_btn">🎲 Je m'inscris sur Megadice</a>
+    <p style="text-align:center;font-size:0.72rem;color:var(--text-muted);margin-top:0.8rem;" data-t="cta_legal">⚠️ 18+ · Jeu responsable · Joueurs Info Service : 09 74 75 13 13</p>
+  </div>
+
+  <div class="footer">© 2025 — JEROMEIBIZA &nbsp;·&nbsp; <a href="https://discord.gg/DPXxEEev4" target="_blank">Discord</a> &nbsp;·&nbsp; <a href="index.html">Tous les bonus</a></div>
+</div>
+
+<script>
+function toggleFaq(btn) {
+  const ans = btn.nextElementSibling;
+  const isOpen = ans.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-q').forEach(b => b.classList.remove('open'));
+  if (!isOpen) { ans.classList.add('open'); btn.classList.add('open'); }
+}
+
+const T = {
+  fr:{ nav_bonus:"🎁 Bonus", nav_story:"👤 Ma Story", jerome_note:`<strong>JeromeIbiza :</strong> « Megadice c'est mon coup de cœur pour le rapport bonus/liberté. No KYC, 200% sur le premier dépôt, 50 Free Spins sur WANTED. Passez simplement par mon lien pour l'offre exclusive. »`, label_bonus:"🎁 Bonus exclusif JeromeIbiza", bonus_title:`🎰 Offre de Bienvenue`, b1:"Bonus <strong>200%</strong> sur le 1er dépôt (jusqu'à <strong>1 BTC</strong>)", b2:"<strong>50 Free Spins</strong> sur WANTED Dead or a Wild", b3:"<strong>5$ de crédit sport</strong> offert", b4:"Dépôt minimum : <strong>20€</strong>", milestone_title:"⚡ Système de bonus progressif — unique chez Megadice", milestone_desc:`Le bonus est libéré en <strong style="color:#fff">10 tranches de 10%</strong> — chaque fois que vous misez 6× votre dépôt initial, 10% du bonus est débloqué :`, cta_btn:"🎲 Réclamer mon bonus Megadice", label_conditions:"📋 Conditions du bonus", cond_mindep:"Dépôt minimum", cond_max:"Bonus maximum", cond_wager_bonus:"Wager bonus dépôt", cond_wager_fs:"Wager Free Spins", cond_delay_bonus:"Délai bonus dépôt", cond_delay_bonus_val:"14 jours", cond_delay_fs:"Délai Free Spins", cond_delay_fs_val:"⚠️ 7 jours seulement", cond_maxbet:"Mise max avec bonus", cond_release:"Libération du bonus", cond_release_val:"Tranches de 10%", cond_kyc:"KYC obligatoire", cond_kyc_val:"Non ✅", cond_currency:"Devise", cond_currency_val:"Crypto uniquement", warning_maxbet:`⚠️ <strong style="color:#FCA5A5;">Attention :</strong> Mise maximale de <strong style="color:#fff">5€ par tour</strong> tant que le bonus est actif. Les Free Spins expirent en <strong style="color:#fff">7 jours</strong> — jouez-les rapidement !`, label_promos:"🏆 Promotions régulières", promo1_title:"Saturday Slots", promo1_val:"2 500 USDT / semaine<br>Tournoi slots", promo2_title:"Live Casino Sunday", promo2_val:"2 500 USDT / semaine<br>Jeux live Evolution", promo3_title:"Drops & Wins", promo3_val:"$2M / mois<br>Pragmatic Play", promo4_title:"Football Tournois", promo4_val:"100 000$+<br>Saison football", label_presentation:"🏠 Présentation de Megadice", presentation_text:`<strong style="color:#fff">Megadice</strong> est un casino crypto et sportsbook lancé en <strong style="color:#fff">2023</strong> sous licence <strong style="color:#fff">Curaçao</strong>. Son atout majeur : <strong style="color:#fff">pas de KYC obligatoire</strong>, des retraits en moins de 2 minutes, plus de <strong style="color:#fff">5 000 jeux</strong> de 50+ providers. Megadice innove avec son <strong style="color:#fff">token $DICE</strong> (staking + airdrops) et une intégration <strong style="color:#fff">Telegram</strong> unique.`, label_rating:"⭐ Notre avis", rating_overall:"Note générale", rating_bonus:"Bonus", rating_privacy:"Confidentialité", rating_games:"Jeux", pros_title:"✅ Points forts", cons_title:"❌ Points faibles", pro1:"No KYC — confidentialité totale", pro2:"200% bonus jusqu'à 1 BTC", pro3:"50 Free Spins sur WANTED", pro4:"Retraits en moins de 2 minutes", pro5:"5 000+ jeux, 50+ providers", pro6:"Token $DICE avec staking", pro7:"Intégration Telegram", con1:"Crypto uniquement", con2:"Wager 40× sur bonus dépôt", con3:"Free Spins expirent en 7 jours", label_faq:"❓ FAQ — Questions fréquentes", faq1_q:"Comment fonctionne le système progressif ? <span class='arrow'>▼</span>", faq1_a:"Le bonus est libéré en <strong>10 tranches de 10%</strong> : chaque fois que vous misez 6× votre dépôt, 10% supplémentaires sont débloqués. Exemple : 100€ dépôt → 200€ bonus → chaque 600€ misés = 20€ débloqués.", faq2_q:"Megadice demande-t-il une vérification d'identité ? <span class='arrow'>▼</span>", faq2_a:"Non pour la plupart des transactions. Megadice est <strong>No KYC</strong> — pas de documents pour les dépôts/retraits standards. KYC possible pour retraits très importants.", faq3_q:"Combien de temps ai-je pour les Free Spins ? <span class='arrow'>▼</span>", faq3_a:"⚠️ <strong>7 jours seulement</strong> pour les Free Spins — activez-les et jouez-les rapidement ! Le bonus dépôt dispose de 14 jours.", faq4_q:"Quelle est la mise max avec un bonus actif ? <span class='arrow'>▼</span>", faq4_a:"⚠️ <strong>5€ par tour maximum</strong>. Dépasser cette limite peut annuler le bonus et les gains. Restez sous 5€ jusqu'à la fin du wager.", faq5_q:"Quelles cryptos sont acceptées ? <span class='arrow'>▼</span>", faq5_a:"Bitcoin, Ethereum, Litecoin, Ripple, Tether, Dogecoin et 20+ autres. Retraits en moins de 2 minutes.", faq6_q:"C'est quoi le token $DICE ? <span class='arrow'>▼</span>", faq6_a:"$DICE est le token natif de Megadice. En le stakant, vous recevez des récompenses passives et des airdrops exclusifs.", faq7_q:"Megadice est-il accessible partout ? <span class='arrow'>▼</span>", faq7_a:"Megadice n'est pas disponible dans tous les pays. Si votre pays n'est pas supporté, un VPN est nécessaire. <strong>Lors de l'inscription, utilisez le pays correspondant à votre VPN.</strong>", label_cta:"🚀 Rejoindre Megadice", cta_final_title:"Profite du bonus exclusif JeromeIbiza", cta_final_sub:`200% + 50 Free Spins sur WANTED — via le lien JeromeIbiza`, cta_final_btn:"🎲 Je m'inscris sur Megadice", cta_legal:"⚠️ 18+ · Jeu responsable · 09 74 75 13 13" },
+  en:{ nav_bonus:"🎁 Bonuses", nav_story:"👤 My Story", jerome_note:`<strong>JeromeIbiza:</strong> "Megadice is my favourite for the bonus/freedom ratio. No KYC, 200% on first deposit, 50 Free Spins on WANTED. Simply use my link for the exclusive offer."`, label_bonus:"🎁 JeromeIbiza Exclusive Bonus", bonus_title:`🎰 Welcome Offer`, b1:"<strong>200%</strong> bonus on 1st deposit (up to <strong>1 BTC</strong>)", b2:"<strong>50 Free Spins</strong> on WANTED Dead or a Wild", b3:"<strong>$5 sports credit</strong> free to try sportsbook", b4:"Minimum deposit: <strong>€20</strong>", milestone_title:"⚡ Progressive bonus system — unique at Megadice", milestone_desc:`The bonus is released in <strong style="color:#fff">10 chunks of 10%</strong> — every time you wager 6× your initial deposit, 10% of the bonus unlocks:`, cta_btn:"🎲 Claim my Megadice bonus", label_conditions:"📋 Bonus conditions", cond_mindep:"Minimum deposit", cond_max:"Maximum bonus", cond_wager_bonus:"Deposit bonus wager", cond_wager_fs:"Free Spins wager", cond_delay_bonus:"Deposit bonus deadline", cond_delay_bonus_val:"14 days", cond_delay_fs:"Free Spins deadline", cond_delay_fs_val:"⚠️ 7 days only", cond_maxbet:"Max bet with bonus", cond_release:"Bonus release", cond_release_val:"10% chunks", cond_kyc:"KYC required", cond_kyc_val:"No ✅", cond_currency:"Currency", cond_currency_val:"Crypto only", warning_maxbet:`⚠️ <strong style="color:#FCA5A5;">Warning:</strong> Maximum bet of <strong style="color:#fff">€5 per spin</strong> while bonus is active. Free Spins expire in <strong style="color:#fff">7 days</strong> — play them fast!`, label_promos:"🏆 Regular promotions", promo1_title:"Saturday Slots", promo1_val:"2,500 USDT / week<br>Slots tournament", promo2_title:"Live Casino Sunday", promo2_val:"2,500 USDT / week<br>Evolution live games", promo3_title:"Drops & Wins", promo3_val:"$2M / month<br>Pragmatic Play", promo4_title:"Football Tournaments", promo4_val:"$100,000+<br>Football season", label_presentation:"🏠 About Megadice", presentation_text:`<strong style="color:#fff">Megadice</strong> is a crypto casino and sportsbook launched in <strong style="color:#fff">2023</strong> under <strong style="color:#fff">Curaçao</strong> license. Key strengths: <strong style="color:#fff">No KYC required</strong>, withdrawals in under 2 minutes, over <strong style="color:#fff">5,000 games</strong> from 50+ providers. Megadice innovates with its native <strong style="color:#fff">$DICE token</strong> (staking + airdrops) and unique <strong style="color:#fff">Telegram integration</strong>.`, label_rating:"⭐ Our review", rating_overall:"Overall score", rating_bonus:"Bonus", rating_privacy:"Privacy", rating_games:"Games", pros_title:"✅ Pros", cons_title:"❌ Cons", pro1:"No KYC — full privacy", pro2:"200% bonus up to 1 BTC", pro3:"50 Free Spins on WANTED", pro4:"Withdrawals in under 2 minutes", pro5:"5,000+ games, 50+ providers", pro6:"$DICE token with staking", pro7:"Telegram integration", con1:"Crypto only", con2:"40× wager on deposit bonus", con3:"Free Spins expire in 7 days", label_faq:"❓ FAQ", faq1_q:"How does the progressive bonus system work? <span class='arrow'>▼</span>", faq1_a:"The bonus is released in <strong>10 chunks of 10%</strong>: every time you wager 6× your deposit, 10% more unlocks. Example: €100 deposit → €200 bonus → every €600 wagered = €20 unlocked.", faq2_q:"Does Megadice require identity verification? <span class='arrow'>▼</span>", faq2_a:"No for most transactions. Megadice is <strong>No KYC</strong> — no documents needed for standard deposits/withdrawals.", faq3_q:"How long do I have for the Free Spins? <span class='arrow'>▼</span>", faq3_a:"⚠️ <strong>Only 7 days</strong> for Free Spins — activate and play them quickly! The deposit bonus has 14 days.", faq4_q:"What's the max bet with an active bonus? <span class='arrow'>▼</span>", faq4_a:"⚠️ <strong>€5 per spin maximum</strong>. Exceeding this can cancel the bonus and winnings. Stay under €5 until the wagering is complete.", faq5_q:"Which cryptos are accepted? <span class='arrow'>▼</span>", faq5_a:"Bitcoin, Ethereum, Litecoin, Ripple, Tether, Dogecoin and 20+ others. Withdrawals in under 2 minutes.", faq6_q:"What is the $DICE token? <span class='arrow'>▼</span>", faq6_a:"$DICE is Megadice's native token. By staking it, you earn passive rewards and exclusive airdrops.", faq7_q:"Is Megadice available everywhere? <span class='arrow'>▼</span>", faq7_a:"Megadice is not available in all countries. If your country is not supported, a VPN is needed. <strong>During registration, use the country matching your VPN.</strong>", label_cta:"🚀 Join Megadice", cta_final_title:"Claim the JeromeIbiza exclusive bonus", cta_final_sub:`200% + 50 Free Spins on WANTED — via JeromeIbiza link`, cta_final_btn:"🎲 Sign up on Megadice", cta_legal:"⚠️ 18+ · Responsible gambling · GamCare: 0808 8020 133" },
+  de:{ nav_bonus:"🎁 Boni", nav_story:"👤 Meine Story", jerome_note:`<strong>JeromeIbiza:</strong> „Megadice ist mein Favorit für das Bonus/Freiheits-Verhältnis. Kein KYC, 200% auf die erste Einzahlung, 50 Free Spins auf WANTED. Nutzen Sie einfach meinen Link für das exklusive Angebot."`, label_bonus:"🎁 Exklusiver JeromeIbiza-Bonus", bonus_title:`🎰 Willkommensangebot`, b1:"<strong>200%</strong> Bonus auf 1. Einzahlung (bis zu <strong>1 BTC</strong>)", b2:"<strong>50 Free Spins</strong> auf WANTED Dead or a Wild", b3:"<strong>5$ Sport-Guthaben</strong> gratis", b4:"Mindesteinzahlung: <strong>20€</strong>", milestone_title:"⚡ Progressives Bonussystem — einzigartig bei Megadice", milestone_desc:`Der Bonus wird in <strong style="color:#fff">10 Tranchen zu 10%</strong> freigegeben — jedes Mal wenn Sie das 6-fache Ihrer Ersteinzahlung setzen, werden 10% freigeschaltet:`, cta_btn:"🎲 Meinen Megadice-Bonus beanspruchen", label_conditions:"📋 Bonusbedingungen", cond_mindep:"Mindesteinzahlung", cond_max:"Maximaler Bonus", cond_wager_bonus:"Umsatz Einzahlungsbonus", cond_wager_fs:"Umsatz Free Spins", cond_delay_bonus:"Frist Einzahlungsbonus", cond_delay_bonus_val:"14 Tage", cond_delay_fs:"Frist Free Spins", cond_delay_fs_val:"⚠️ Nur 7 Tage", cond_maxbet:"Max-Einsatz mit Bonus", cond_release:"Bonusfreigabe", cond_release_val:"10%-Tranchen", cond_kyc:"KYC erforderlich", cond_kyc_val:"Nein ✅", cond_currency:"Währung", cond_currency_val:"Nur Krypto", warning_maxbet:`⚠️ <strong style="color:#FCA5A5;">Achtung:</strong> Maximaler Einsatz von <strong style="color:#fff">5€ pro Runde</strong> bei aktivem Bonus. Free Spins verfallen nach <strong style="color:#fff">7 Tagen</strong> — schnell spielen!`, label_promos:"🏆 Regelmäßige Aktionen", promo1_title:"Saturday Slots", promo1_val:"2.500 USDT / Woche<br>Slots-Turnier", promo2_title:"Live Casino Sunday", promo2_val:"2.500 USDT / Woche<br>Evolution Live", promo3_title:"Drops & Wins", promo3_val:"2 Mio.$ / Monat<br>Pragmatic Play", promo4_title:"Fußball-Turniere", promo4_val:"100.000$+<br>Fußballsaison", label_presentation:"🏠 Über Megadice", presentation_text:`<strong style="color:#fff">Megadice</strong> ist ein Krypto-Casino und Sportsbook, das <strong style="color:#fff">2023</strong> mit <strong style="color:#fff">Curaçao-Lizenz</strong> gestartet ist. Kein KYC, Auszahlungen in unter 2 Minuten, über <strong style="color:#fff">5.000 Spiele</strong> von 50+ Anbietern. Einzigartig: <strong style="color:#fff">$DICE-Token</strong> (Staking + Airdrops) und <strong style="color:#fff">Telegram-Integration</strong>.`, label_rating:"⭐ Unser Urteil", rating_overall:"Gesamtnote", rating_bonus:"Bonus", rating_privacy:"Datenschutz", rating_games:"Spiele", pros_title:"✅ Vorteile", cons_title:"❌ Nachteile", pro1:"Kein KYC — volle Privatsphäre", pro2:"200% Bonus bis 1 BTC", pro3:"50 Free Spins auf WANTED", pro4:"Auszahlungen in unter 2 Min.", pro5:"5.000+ Spiele, 50+ Anbieter", pro6:"$DICE Token mit Staking", pro7:"Telegram-Integration", con1:"Nur Krypto", con2:"40× Umsatz auf Einzahlungsbonus", con3:"Free Spins verfallen nach 7 Tagen", label_faq:"❓ FAQ", faq1_q:"Wie funktioniert das progressive Bonussystem? <span class='arrow'>▼</span>", faq1_a:"Der Bonus wird in <strong>10 Tranchen zu 10%</strong> freigegeben: Jedes Mal wenn Sie das 6-fache der Einzahlung setzen, werden 10% freigeschaltet.", faq2_q:"Verlangt Megadice eine Identitätsprüfung? <span class='arrow'>▼</span>", faq2_a:"Nein für die meisten Transaktionen. Megadice ist <strong>No KYC</strong>.", faq3_q:"Wie lange habe ich für die Free Spins? <span class='arrow'>▼</span>", faq3_a:"⚠️ <strong>Nur 7 Tage</strong> für Free Spins — sofort spielen! Der Einzahlungsbonus hat 14 Tage.", faq4_q:"Was ist der maximale Einsatz mit aktivem Bonus? <span class='arrow'>▼</span>", faq4_a:"⚠️ <strong>5€ pro Runde</strong> maximal. Überschreitungen können den Bonus annullieren.", faq5_q:"Welche Kryptowährungen werden akzeptiert? <span class='arrow'>▼</span>", faq5_a:"Bitcoin, Ethereum, Litecoin, Ripple, Tether, Dogecoin und 20+ weitere. Auszahlungen in unter 2 Minuten.", faq6_q:"Was ist der $DICE Token? <span class='arrow'>▼</span>", faq6_a:"$DICE ist Megadices nativer Token. Durch Staking erhalten Sie passive Belohnungen und exklusive Airdrops.", faq7_q:"Ist Megadice überall verfügbar? <span class='arrow'>▼</span>", faq7_a:"Megadice ist nicht in allen Ländern verfügbar. Falls Ihr Land nicht unterstützt wird, ist ein VPN erforderlich. <strong>Verwenden Sie bei der Registrierung das Land Ihrer VPN-Verbindung.</strong>", label_cta:"🚀 Megadice beitreten", cta_final_title:"Hol dir den exklusiven JeromeIbiza-Bonus", cta_final_sub:`200% + 50 Free Spins auf WANTED — über JeromeIbiza-Link`, cta_final_btn:"🎲 Jetzt bei Megadice anmelden", cta_legal:"⚠️ 18+ · Verantwortungsvolles Spielen · 0800 1372700" },
+  es:{ nav_bonus:"🎁 Bonos", nav_story:"👤 Mi Historia", jerome_note:`<strong>JeromeIbiza:</strong> «Megadice es mi favorito por la relación bonus/libertad. Sin KYC, 200% en el primer depósito, 50 Giros Gratis en WANTED. Usa simplemente mi enlace para la oferta exclusiva.»`, label_bonus:"🎁 Bono exclusivo JeromeIbiza", bonus_title:`🎰 Oferta de Bienvenida`, b1:"Bono <strong>200%</strong> en 1er depósito (hasta <strong>1 BTC</strong>)", b2:"<strong>50 Giros Gratis</strong> en WANTED Dead or a Wild", b3:"<strong>$5 crédito deportivo</strong> gratis", b4:"Depósito mínimo: <strong>20€</strong>", milestone_title:"⚡ Sistema de bonus progresivo — único en Megadice", milestone_desc:`El bonus se libera en <strong style="color:#fff">10 tramos del 10%</strong> — cada vez que apuestas 6× tu depósito inicial, se desbloquea un 10%:`, cta_btn:"🎲 Reclamar mi bono Megadice", label_conditions:"📋 Condiciones del bono", cond_mindep:"Depósito mínimo", cond_max:"Bono máximo", cond_wager_bonus:"Wager bono depósito", cond_wager_fs:"Wager Giros Gratis", cond_delay_bonus:"Plazo bono depósito", cond_delay_bonus_val:"14 días", cond_delay_fs:"Plazo Giros Gratis", cond_delay_fs_val:"⚠️ Solo 7 días", cond_maxbet:"Apuesta máx con bono", cond_release:"Liberación del bono", cond_release_val:"Tramos del 10%", cond_kyc:"KYC obligatorio", cond_kyc_val:"No ✅", cond_currency:"Divisa", cond_currency_val:"Solo crypto", warning_maxbet:`⚠️ <strong style="color:#FCA5A5;">Atención:</strong> Apuesta máxima de <strong style="color:#fff">5€ por giro</strong> mientras el bono está activo. Los Giros Gratis caducan en <strong style="color:#fff">7 días</strong> — ¡juégalos rápido!`, label_promos:"🏆 Promociones regulares", promo1_title:"Saturday Slots", promo1_val:"2.500 USDT / semana<br>Torneo slots", promo2_title:"Live Casino Sunday", promo2_val:"2.500 USDT / semana<br>Live Evolution", promo3_title:"Drops & Wins", promo3_val:"$2M / mes<br>Pragmatic Play", promo4_title:"Torneos Fútbol", promo4_val:"100.000$+<br>Temporada fútbol", label_presentation:"🏠 Sobre Megadice", presentation_text:`<strong style="color:#fff">Megadice</strong> es un casino crypto y sportsbook lanzado en <strong style="color:#fff">2023</strong> con licencia <strong style="color:#fff">Curaçao</strong>. Sin KYC, retiros en menos de 2 minutos, más de <strong style="color:#fff">5.000 juegos</strong> de 50+ proveedores. Único: token <strong style="color:#fff">$DICE</strong> (staking + airdrops) e integración <strong style="color:#fff">Telegram</strong>.`, label_rating:"⭐ Nuestra opinión", rating_overall:"Puntuación", rating_bonus:"Bono", rating_privacy:"Privacidad", rating_games:"Juegos", pros_title:"✅ Puntos fuertes", cons_title:"❌ Puntos débiles", pro1:"Sin KYC — privacidad total", pro2:"Bono 200% hasta 1 BTC", pro3:"50 Giros Gratis en WANTED", pro4:"Retiros en menos de 2 min.", pro5:"5.000+ juegos, 50+ proveedores", pro6:"Token $DICE con staking", pro7:"Integración Telegram", con1:"Solo crypto", con2:"Wager 40× en bono depósito", con3:"Giros Gratis caducan en 7 días", label_faq:"❓ FAQ", faq1_q:"¿Cómo funciona el sistema progresivo? <span class='arrow'>▼</span>", faq1_a:"El bono se libera en <strong>10 tramos del 10%</strong>: cada vez que apuestas 6× tu depósito, se desbloquea un 10% más.", faq2_q:"¿Megadice requiere verificación de identidad? <span class='arrow'>▼</span>", faq2_a:"No para la mayoría de transacciones. Megadice es <strong>No KYC</strong>.", faq3_q:"¿Cuánto tiempo tengo para los Giros Gratis? <span class='arrow'>▼</span>", faq3_a:"⚠️ <strong>Solo 7 días</strong> — ¡actívalos y juégalos rápido! El bono depósito tiene 14 días.", faq4_q:"¿Cuál es la apuesta máxima con bono activo? <span class='arrow'>▼</span>", faq4_a:"⚠️ <strong>5€ por giro máximo</strong>. Superar este límite puede cancelar el bono.", faq5_q:"¿Qué criptos se aceptan? <span class='arrow'>▼</span>", faq5_a:"Bitcoin, Ethereum, Litecoin, Ripple, Tether, Dogecoin y 20+ más. Retiros en menos de 2 minutos.", faq6_q:"¿Qué es el token $DICE? <span class='arrow'>▼</span>", faq6_a:"$DICE es el token nativo. Al hacerle staking recibes recompensas pasivas y airdrops exclusivos.", faq7_q:"¿Está Megadice disponible en todos los países? <span class='arrow'>▼</span>", faq7_a:"Megadice no está disponible en todos los países. Si tu país no está soportado, necesitas VPN. <strong>Durante el registro, usa el país de tu VPN.</strong>", label_cta:"🚀 Unirse a Megadice", cta_final_title:"Aprovecha el bono exclusivo JeromeIbiza", cta_final_sub:`200% + 50 Giros Gratis en WANTED — vía enlace JeromeIbiza`, cta_final_btn:"🎲 Me registro en Megadice", cta_legal:"⚠️ 18+ · Juego responsable · 900 200 800" },
+  it:{ nav_bonus:"🎁 Bonus", nav_story:"👤 La Mia Storia", jerome_note:`<strong>JeromeIbiza:</strong> «Megadice è il mio preferito per il rapporto bonus/libertà. No KYC, 200% sul primo deposito, 50 Free Spin su WANTED. Usa semplicemente il mio link per l'offerta esclusiva.»`, label_bonus:"🎁 Bonus esclusivo JeromeIbiza", bonus_title:`🎰 Offerta di Benvenuto`, b1:"Bonus <strong>200%</strong> sul 1° deposito (fino a <strong>1 BTC</strong>)", b2:"<strong>50 Free Spin</strong> su WANTED Dead or a Wild", b3:"<strong>$5 credito sport</strong> gratis", b4:"Deposito minimo: <strong>20€</strong>", milestone_title:"⚡ Sistema bonus progressivo — unico su Megadice", milestone_desc:`Il bonus viene rilasciato in <strong style="color:#fff">10 tranche del 10%</strong> — ogni volta che si scommette 6× il deposito iniziale, si sblocca il 10%:`, cta_btn:"🎲 Riscatta il mio bonus Megadice", label_conditions:"📋 Condizioni del bonus", cond_mindep:"Deposito minimo", cond_max:"Bonus massimo", cond_wager_bonus:"Wager bonus deposito", cond_wager_fs:"Wager Free Spin", cond_delay_bonus:"Scadenza bonus deposito", cond_delay_bonus_val:"14 giorni", cond_delay_fs:"Scadenza Free Spin", cond_delay_fs_val:"⚠️ Solo 7 giorni", cond_maxbet:"Puntata max con bonus", cond_release:"Rilascio bonus", cond_release_val:"Tranche del 10%", cond_kyc:"KYC obbligatorio", cond_kyc_val:"No ✅", cond_currency:"Valuta", cond_currency_val:"Solo crypto", warning_maxbet:`⚠️ <strong style="color:#FCA5A5;">Attenzione:</strong> Puntata massima di <strong style="color:#fff">5€ per giro</strong> con bonus attivo. I Free Spin scadono in <strong style="color:#fff">7 giorni</strong> — giocali subito!`, label_promos:"🏆 Promozioni regolari", promo1_title:"Saturday Slots", promo1_val:"2.500 USDT / settimana<br>Torneo slot", promo2_title:"Live Casino Sunday", promo2_val:"2.500 USDT / settimana<br>Live Evolution", promo3_title:"Drops & Wins", promo3_val:"$2M / mese<br>Pragmatic Play", promo4_title:"Tornei Calcio", promo4_val:"100.000$+<br>Stagione calcio", label_presentation:"🏠 Informazioni su Megadice", presentation_text:`<strong style="color:#fff">Megadice</strong> è un casino crypto e sportsbook lanciato nel <strong style="color:#fff">2023</strong> con licenza <strong style="color:#fff">Curaçao</strong>. Nessun KYC, prelievi in meno di 2 minuti, oltre <strong style="color:#fff">5.000 giochi</strong> da 50+ provider. Unico: token <strong style="color:#fff">$DICE</strong> (staking + airdrop) e integrazione <strong style="color:#fff">Telegram</strong>.`, label_rating:"⭐ La nostra opinione", rating_overall:"Voto generale", rating_bonus:"Bonus", rating_privacy:"Privacy", rating_games:"Giochi", pros_title:"✅ Punti di forza", cons_title:"❌ Punti deboli", pro1:"No KYC — privacy totale", pro2:"Bonus 200% fino a 1 BTC", pro3:"50 Free Spin su WANTED", pro4:"Prelievi in meno di 2 min.", pro5:"5.000+ giochi, 50+ provider", pro6:"Token $DICE con staking", pro7:"Integrazione Telegram", con1:"Solo crypto", con2:"Wager 40× su bonus deposito", con3:"Free Spin scadono in 7 giorni", label_faq:"❓ FAQ", faq1_q:"Come funziona il sistema progressivo? <span class='arrow'>▼</span>", faq1_a:"Il bonus viene rilasciato in <strong>10 tranche del 10%</strong>: ogni volta che si scommette 6× il deposito, si sblocca un ulteriore 10%.", faq2_q:"Megadice richiede verifica d'identità? <span class='arrow'>▼</span>", faq2_a:"No per la maggior parte delle transazioni. Megadice è <strong>No KYC</strong>.", faq3_q:"Quanto tempo ho per i Free Spin? <span class='arrow'>▼</span>", faq3_a:"⚠️ <strong>Solo 7 giorni</strong> — attivali e giocali subito! Il bonus deposito ha 14 giorni.", faq4_q:"Qual è la puntata massima con bonus attivo? <span class='arrow'>▼</span>", faq4_a:"⚠️ <strong>5€ per giro massimo</strong>. Superare questo limite può annullare il bonus.", faq5_q:"Quali crypto sono accettate? <span class='arrow'>▼</span>", faq5_a:"Bitcoin, Ethereum, Litecoin, Ripple, Tether, Dogecoin e 20+ altre. Prelievi in meno di 2 minuti.", faq6_q:"Cos'è il token $DICE? <span class='arrow'>▼</span>", faq6_a:"$DICE è il token nativo. Facendo staking si ricevono ricompense passive e airdrop esclusivi.", faq7_q:"Megadice è disponibile ovunque? <span class='arrow'>▼</span>", faq7_a:"Megadice non è disponibile in tutti i paesi. Se il tuo paese non è supportato, è necessario un VPN. <strong>Durante la registrazione, usa il paese del tuo VPN.</strong>", label_cta:"🚀 Iscriviti a Megadice", cta_final_title:"Approfitta del bonus esclusivo JeromeIbiza", cta_final_sub:`200% + 50 Free Spin su WANTED — tramite link JeromeIbiza`, cta_final_btn:"🎲 Mi iscrivo su Megadice", cta_legal:"⚠️ 18+ · Gioco responsabile · 800 558 822" },
+  sv:{ nav_bonus:"🎁 Bonusar", nav_story:"👤 Min Story", jerome_note:`<strong>JeromeIbiza:</strong> "Megadice är min favorit för bonus/frihet-förhållandet. Inget KYC, 200% på första insättning, 50 Free Spins på WANTED. Använd helt enkelt min länk för det exklusiva erbjudandet."`, label_bonus:"🎁 Exklusiv JeromeIbiza-bonus", bonus_title:`🎰 Välkomsterbjudande`, b1:"<strong>200%</strong> bonus på 1:a insättning (upp till <strong>1 BTC</strong>)", b2:"<strong>50 Free Spins</strong> på WANTED Dead or a Wild", b3:"<strong>$5 sportkredit</strong> gratis", b4:"Minimiinsättning: <strong>20€</strong>", milestone_title:"⚡ Progressivt bonussystem — unikt hos Megadice", milestone_desc:`Bonusen frigörs i <strong style="color:#fff">10 delar om 10%</strong> — varje gång du satsar 6× din startinsättning låses 10% upp:`, cta_btn:"🎲 Hämta min Megadice-bonus", label_conditions:"📋 Bonusvillkor", cond_mindep:"Minimiinsättning", cond_max:"Maximal bonus", cond_wager_bonus:"Omsättning insättningsbonus", cond_wager_fs:"Omsättning Free Spins", cond_delay_bonus:"Frist insättningsbonus", cond_delay_bonus_val:"14 dagar", cond_delay_fs:"Frist Free Spins", cond_delay_fs_val:"⚠️ Bara 7 dagar", cond_maxbet:"Max insats med bonus", cond_release:"Bonusfrisläppning", cond_release_val:"10%-delar", cond_kyc:"KYC krävs", cond_kyc_val:"Nej ✅", cond_currency:"Valuta", cond_currency_val:"Endast krypto", warning_maxbet:`⚠️ <strong style="color:#FCA5A5;">Varning:</strong> Max insats <strong style="color:#fff">5€ per snurr</strong> med aktiv bonus. Free Spins löper ut efter <strong style="color:#fff">7 dagar</strong> — spela dem snabbt!`, label_promos:"🏆 Regelbundna kampanjer", promo1_title:"Saturday Slots", promo1_val:"2 500 USDT / vecka<br>Slotturneringen", promo2_title:"Live Casino Sunday", promo2_val:"2 500 USDT / vecka<br>Evolution Live", promo3_title:"Drops & Wins", promo3_val:"$2M / månad<br>Pragmatic Play", promo4_title:"Fotbollsturneringar", promo4_val:"100 000$+<br>Fotbollssäsong", label_presentation:"🏠 Om Megadice", presentation_text:`<strong style="color:#fff">Megadice</strong> är ett kryptocasino och sportsbook lanserat <strong style="color:#fff">2023</strong> med <strong style="color:#fff">Curaçao-licens</strong>. Inget KYC, uttag på under 2 minuter, över <strong style="color:#fff">5 000 spel</strong> från 50+ leverantörer. Unikt: <strong style="color:#fff">$DICE-token</strong> (staking + airdrops) och <strong style="color:#fff">Telegram-integration</strong>.`, label_rating:"⭐ Vår recension", rating_overall:"Totalbetyg", rating_bonus:"Bonus", rating_privacy:"Integritet", rating_games:"Spel", pros_title:"✅ Fördelar", cons_title:"❌ Nackdelar", pro1:"Inget KYC — full integritet", pro2:"200% bonus upp till 1 BTC", pro3:"50 Free Spins på WANTED", pro4:"Uttag på under 2 min.", pro5:"5 000+ spel, 50+ leverantörer", pro6:"$DICE token med staking", pro7:"Telegram-integration", con1:"Endast krypto", con2:"40× omsättning på insättningsbonus", con3:"Free Spins löper ut efter 7 dagar", label_faq:"❓ FAQ", faq1_q:"Hur fungerar det progressiva systemet? <span class='arrow'>▼</span>", faq1_a:"Bonusen frigörs i <strong>10 delar om 10%</strong>: varje gång du satsar 6× insättningen låses ytterligare 10% upp.", faq2_q:"Kräver Megadice identitetsverifiering? <span class='arrow'>▼</span>", faq2_a:"Nej för de flesta transaktioner. Megadice är <strong>No KYC</strong>.", faq3_q:"Hur lång tid har jag för Free Spins? <span class='arrow'>▼</span>", faq3_a:"⚠️ <strong>Bara 7 dagar</strong> — aktivera och spela dem snabbt! Insättningsbonusen har 14 dagar.", faq4_q:"Vad är max insats med aktiv bonus? <span class='arrow'>▼</span>", faq4_a:"⚠️ <strong>5€ per snurr max</strong>. Överskridande kan annullera bonusen.", faq5_q:"Vilka kryptovalutor accepteras? <span class='arrow'>▼</span>", faq5_a:"Bitcoin, Ethereum, Litecoin, Ripple, Tether, Dogecoin och 20+ fler. Uttag på under 2 minuter.", faq6_q:"Vad är $DICE-token? <span class='arrow'>▼</span>", faq6_a:"$DICE är Megadices native token. Genom staking får du passiva belöningar och exklusiva airdrops.", faq7_q:"Är Megadice tillgängligt överallt? <span class='arrow'>▼</span>", faq7_a:"Megadice är inte tillgängligt i alla länder. Om ditt land inte stöds behövs ett VPN. <strong>Använd landet som matchar din VPN vid registrering.</strong>", label_cta:"🚀 Gå med i Megadice", cta_final_title:"Ta del av JeromeIbizas exklusiva bonus", cta_final_sub:`200% + 50 Free Spins på WANTED — via JeromeIbiza-länk`, cta_final_btn:"🎲 Jag registrerar mig på Megadice", cta_legal:"⚠️ 18+ · Spela ansvarsfullt · 020-819 100" },
+  nl:{ nav_bonus:"🎁 Bonussen", nav_story:"👤 Mijn Verhaal", jerome_note:`<strong>JeromeIbiza:</strong> "Megadice is mijn favoriet voor de bonus/vrijheid-verhouding. Geen KYC, 200% op eerste storting, 50 Free Spins op WANTED. Gebruik gewoon mijn link voor het exclusieve aanbod."`, label_bonus:"🎁 Exclusieve JeromeIbiza-bonus", bonus_title:`🎰 Welkomstaanbieding`, b1:"<strong>200%</strong> bonus op 1e storting (tot <strong>1 BTC</strong>)", b2:"<strong>50 Free Spins</strong> op WANTED Dead or a Wild", b3:"<strong>$5 sportkredit</strong> gratis", b4:"Minimale storting: <strong>€20</strong>", milestone_title:"⚡ Progressief bonussysteem — uniek bij Megadice", milestone_desc:`De bonus wordt vrijgegeven in <strong style="color:#fff">10 delen van 10%</strong> — elke keer dat je 6× je beginstorting inzet, wordt 10% ontgrendeld:`, cta_btn:"🎲 Mijn Megadice-bonus claimen", label_conditions:"📋 Bonusvoorwaarden", cond_mindep:"Minimale storting", cond_max:"Maximale bonus", cond_wager_bonus:"Inzet stortingsbonus", cond_wager_fs:"Inzet Free Spins", cond_delay_bonus:"Deadline stortingsbonus", cond_delay_bonus_val:"14 dagen", cond_delay_fs:"Deadline Free Spins", cond_delay_fs_val:"⚠️ Slechts 7 dagen", cond_maxbet:"Max inzet met bonus", cond_release:"Bonusvrijgave", cond_release_val:"10%-delen", cond_kyc:"KYC vereist", cond_kyc_val:"Nee ✅", cond_currency:"Valuta", cond_currency_val:"Alleen crypto", warning_maxbet:`⚠️ <strong style="color:#FCA5A5;">Let op:</strong> Max inzet <strong style="color:#fff">€5 per draai</strong> met actieve bonus. Free Spins verlopen na <strong style="color:#fff">7 dagen</strong> — speel ze snel!`, label_promos:"🏆 Regelmatige promoties", promo1_title:"Saturday Slots", promo1_val:"2.500 USDT / week<br>Slottoernooi", promo2_title:"Live Casino Sunday", promo2_val:"2.500 USDT / week<br>Evolution Live", promo3_title:"Drops & Wins", promo3_val:"$2M / maand<br>Pragmatic Play", promo4_title:"Voetbaltoernooien", promo4_val:"100.000$+<br>Voetbalseizoen", label_presentation:"🏠 Over Megadice", presentation_text:`<strong style="color:#fff">Megadice</strong> is een crypto casino en sportsbook gelanceerd in <strong style="color:#fff">2023</strong> met <strong style="color:#fff">Curaçao-licentie</strong>. Geen KYC, opnames in minder dan 2 minuten, meer dan <strong style="color:#fff">5.000 spellen</strong> van 50+ aanbieders. Uniek: <strong style="color:#fff">$DICE-token</strong> (staking + airdrops) en <strong style="color:#fff">Telegram-integratie</strong>.`, label_rating:"⭐ Onze beoordeling", rating_overall:"Algemeen", rating_bonus:"Bonus", rating_privacy:"Privacy", rating_games:"Spellen", pros_title:"✅ Voordelen", cons_title:"❌ Nadelen", pro1:"Geen KYC — volledige privacy", pro2:"200% bonus tot 1 BTC", pro3:"50 Free Spins op WANTED", pro4:"Opnames in minder dan 2 min.", pro5:"5.000+ spellen, 50+ aanbieders", pro6:"$DICE token met staking", pro7:"Telegram-integratie", con1:"Alleen crypto", con2:"40× inzet op stortingsbonus", con3:"Free Spins verlopen na 7 dagen", label_faq:"❓ FAQ", faq1_q:"Hoe werkt het progressieve systeem? <span class='arrow'>▼</span>", faq1_a:"De bonus wordt vrijgegeven in <strong>10 delen van 10%</strong>: elke keer dat je 6× je storting inzet, wordt nog eens 10% ontgrendeld.", faq2_q:"Vereist Megadice identiteitsverificatie? <span class='arrow'>▼</span>", faq2_a:"Nee voor de meeste transacties. Megadice is <strong>No KYC</strong>.", faq3_q:"Hoeveel tijd heb ik voor Free Spins? <span class='arrow'>▼</span>", faq3_a:"⚠️ <strong>Slechts 7 dagen</strong> — activeer en speel ze snel! De stortingsbonus heeft 14 dagen.", faq4_q:"Wat is de max inzet met actieve bonus? <span class='arrow'>▼</span>", faq4_a:"⚠️ <strong>€5 per draai max</strong>. Overschrijding kan de bonus annuleren.", faq5_q:"Welke crypto worden geaccepteerd? <span class='arrow'>▼</span>", faq5_a:"Bitcoin, Ethereum, Litecoin, Ripple, Tether, Dogecoin en 20+ meer. Opnames in minder dan 2 minuten.", faq6_q:"Wat is de $DICE token? <span class='arrow'>▼</span>", faq6_a:"$DICE is Megadice's native token. Door te staken ontvang je passieve beloningen en exclusieve airdrops.", faq7_q:"Is Megadice overal beschikbaar? <span class='arrow'>▼</span>", faq7_a:"Megadice is niet beschikbaar in alle landen. Als jouw land niet wordt ondersteund, is een VPN vereist. <strong>Gebruik bij registratie het land van je VPN.</strong>", label_cta:"🚀 Word lid van Megadice", cta_final_title:"Pak de exclusieve JeromeIbiza-bonus", cta_final_sub:`200% + 50 Free Spins op WANTED — via JeromeIbiza-link`, cta_final_btn:"🎲 Ik registreer me bij Megadice", cta_legal:"⚠️ 18+ · Verantwoord spelen · 0900-1090" },
+  pl:{ nav_bonus:"🎁 Bonusy", nav_story:"👤 Moja Historia", jerome_note:`<strong>JeromeIbiza:</strong> „Megadice to mój faworyt pod względem stosunku bonus/wolność. Bez KYC, 200% na pierwszą wpłatę, 50 Free Spinów na WANTED. Po prostu użyj mojego linku dla ekskluzywnej oferty."`, label_bonus:"🎁 Ekskluzywny bonus JeromeIbiza", bonus_title:`🎰 Oferta Powitalna`, b1:"Bonus <strong>200%</strong> na 1. wpłatę (do <strong>1 BTC</strong>)", b2:"<strong>50 Free Spinów</strong> na WANTED Dead or a Wild", b3:"<strong>$5 kredytu sportowego</strong> gratis", b4:"Minimalna wpłata: <strong>20€</strong>", milestone_title:"⚡ Progresywny system bonusu — unikalny w Megadice", milestone_desc:`Bonus jest uwalniany w <strong style="color:#fff">10 transzach po 10%</strong> — za każdym razem gdy postawisz 6× swój depozyt, odblokowuje się 10%:`, cta_btn:"🎲 Odbieram mój bonus Megadice", label_conditions:"📋 Warunki bonusu", cond_mindep:"Minimalna wpłata", cond_max:"Maksymalny bonus", cond_wager_bonus:"Obrót bonus depozytowy", cond_wager_fs:"Obrót Free Spiny", cond_delay_bonus:"Termin bonus depozytowy", cond_delay_bonus_val:"14 dni", cond_delay_fs:"Termin Free Spiny", cond_delay_fs_val:"⚠️ Tylko 7 dni", cond_maxbet:"Maks. zakład z bonusem", cond_release:"Uwalnianie bonusu", cond_release_val:"Transze 10%", cond_kyc:"KYC wymagane", cond_kyc_val:"Nie ✅", cond_currency:"Waluta", cond_currency_val:"Tylko krypto", warning_maxbet:`⚠️ <strong style="color:#FCA5A5;">Uwaga:</strong> Maksymalny zakład <strong style="color:#fff">5€ za obrót</strong> przy aktywnym bonusie. Free Spiny wygasają po <strong style="color:#fff">7 dniach</strong> — graj szybko!`, label_promos:"🏆 Regularne promocje", promo1_title:"Saturday Slots", promo1_val:"2 500 USDT / tydzień<br>Turniej slotów", promo2_title:"Live Casino Sunday", promo2_val:"2 500 USDT / tydzień<br>Evolution Live", promo3_title:"Drops & Wins", promo3_val:"$2M / miesiąc<br>Pragmatic Play", promo4_title:"Turnieje Piłkarskie", promo4_val:"100 000$+<br>Sezon piłkarski", label_presentation:"🏠 O Megadice", presentation_text:`<strong style="color:#fff">Megadice</strong> to kasyno krypto i sportsbook uruchomione w <strong style="color:#fff">2023</strong> r. z licencją <strong style="color:#fff">Curaçao</strong>. Bez KYC, wypłaty w mniej niż 2 minuty, ponad <strong style="color:#fff">5 000 gier</strong> od 50+ dostawców. Wyjątkowe: token <strong style="color:#fff">$DICE</strong> (staking + airdropy) i integracja z <strong style="color:#fff">Telegramem</strong>.`, label_rating:"⭐ Nasza ocena", rating_overall:"Ocena ogólna", rating_bonus:"Bonus", rating_privacy:"Prywatność", rating_games:"Gry", pros_title:"✅ Zalety", cons_title:"❌ Wady", pro1:"Bez KYC — pełna prywatność", pro2:"Bonus 200% do 1 BTC", pro3:"50 Free Spinów na WANTED", pro4:"Wypłaty w mniej niż 2 min.", pro5:"5 000+ gier, 50+ dostawców", pro6:"Token $DICE ze stakingiem", pro7:"Integracja z Telegramem", con1:"Tylko krypto", con2:"Obrót 40× na bonus depozytowy", con3:"Free Spiny wygasają po 7 dniach", label_faq:"❓ FAQ", faq1_q:"Jak działa progresywny system bonusu? <span class='arrow'>▼</span>", faq1_a:"Bonus jest uwalniany w <strong>10 transzach po 10%</strong>: za każdym razem gdy postawisz 6× depozyt, odblokowuje się kolejne 10%.", faq2_q:"Czy Megadice wymaga weryfikacji tożsamości? <span class='arrow'>▼</span>", faq2_a:"Nie dla większości transakcji. Megadice to <strong>No KYC</strong>.", faq3_q:"Ile czasu mam na Free Spiny? <span class='arrow'>▼</span>", faq3_a:"⚠️ <strong>Tylko 7 dni</strong> — aktywuj i graj szybko! Bonus depozytowy ma 14 dni.", faq4_q:"Jaki jest maks. zakład z aktywnym bonusem? <span class='arrow'>▼</span>", faq4_a:"⚠️ <strong>5€ za obrót maksymalnie</strong>. Przekroczenie może anulować bonus.", faq5_q:"Jakie kryptowaluty są akceptowane? <span class='arrow'>▼</span>", faq5_a:"Bitcoin, Ethereum, Litecoin, Ripple, Tether, Dogecoin i 20+ innych. Wypłaty w mniej niż 2 minuty.", faq6_q:"Czym jest token $DICE? <span class='arrow'>▼</span>", faq6_a:"$DICE to natywny token Megadice. Stakując go, otrzymujesz pasywne nagrody i ekskluzywne airdropy.", faq7_q:"Czy Megadice jest dostępne wszędzie? <span class='arrow'>▼</span>", faq7_a:"Megadice nie jest dostępne we wszystkich krajach. Jeśli Twój kraj nie jest obsługiwany, potrzebny jest VPN. <strong>Podczas rejestracji użyj kraju odpowiadającego Twojemu VPN.</strong>", label_cta:"🚀 Dołącz do Megadice", cta_final_title:"Skorzystaj z ekskluzywnego bonusu JeromeIbiza", cta_final_sub:`200% + 50 Free Spinów na WANTED — przez link JeromeIbiza`, cta_final_btn:"🎲 Rejestruję się na Megadice", cta_legal:"⚠️ 18+ · Graj odpowiedzialnie · 801 889 880" },
+  pt:{ nav_bonus:"🎁 Bónus", nav_story:"👤 A Minha História", jerome_note:`<strong>JeromeIbiza:</strong> «Megadice é o meu favorito pela relação bónus/liberdade. Sem KYC, 200% no primeiro depósito, 50 Free Spins em WANTED. Usa simplesmente o meu link para a oferta exclusiva.»`, label_bonus:"🎁 Bónus exclusivo JeromeIbiza", bonus_title:`🎰 Oferta de Boas-vindas`, b1:"Bónus <strong>200%</strong> no 1.º depósito (até <strong>1 BTC</strong>)", b2:"<strong>50 Free Spins</strong> em WANTED Dead or a Wild", b3:"<strong>$5 crédito desportivo</strong> grátis", b4:"Depósito mínimo: <strong>20€</strong>", milestone_title:"⚡ Sistema de bónus progressivo — único no Megadice", milestone_desc:`O bónus é libertado em <strong style="color:#fff">10 parcelas de 10%</strong> — cada vez que apostas 6× o teu depósito inicial, desbloqueias 10%:`, cta_btn:"🎲 Reclamar o meu bónus Megadice", label_conditions:"📋 Condições do bónus", cond_mindep:"Depósito mínimo", cond_max:"Bónus máximo", cond_wager_bonus:"Wager bónus depósito", cond_wager_fs:"Wager Free Spins", cond_delay_bonus:"Prazo bónus depósito", cond_delay_bonus_val:"14 dias", cond_delay_fs:"Prazo Free Spins", cond_delay_fs_val:"⚠️ Apenas 7 dias", cond_maxbet:"Aposta máx com bónus", cond_release:"Libertação do bónus", cond_release_val:"Parcelas de 10%", cond_kyc:"KYC obrigatório", cond_kyc_val:"Não ✅", cond_currency:"Moeda", cond_currency_val:"Apenas cripto", warning_maxbet:`⚠️ <strong style="color:#FCA5A5;">Atenção:</strong> Aposta máxima de <strong style="color:#fff">5€ por giro</strong> com bónus ativo. Free Spins expiram em <strong style="color:#fff">7 dias</strong> — joga-os rapidamente!`, label_promos:"🏆 Promoções regulares", promo1_title:"Saturday Slots", promo1_val:"2.500 USDT / semana<br>Torneio slots", promo2_title:"Live Casino Sunday", promo2_val:"2.500 USDT / semana<br>Evolution Live", promo3_title:"Drops & Wins", promo3_val:"$2M / mês<br>Pragmatic Play", promo4_title:"Torneios Futebol", promo4_val:"100.000$+<br>Época de futebol", label_presentation:"🏠 Sobre o Megadice", presentation_text:`<strong style="color:#fff">Megadice</strong> é um casino crypto e sportsbook lançado em <strong style="color:#fff">2023</strong> com licença <strong style="color:#fff">Curaçao</strong>. Sem KYC, levantamentos em menos de 2 minutos, mais de <strong style="color:#fff">5.000 jogos</strong> de 50+ fornecedores. Único: token <strong style="color:#fff">$DICE</strong> (staking + airdrops) e integração <strong style="color:#fff">Telegram</strong>.`, label_rating:"⭐ A nossa opinião", rating_overall:"Pontuação", rating_bonus:"Bónus", rating_privacy:"Privacidade", rating_games:"Jogos", pros_title:"✅ Pontos fortes", cons_title:"❌ Pontos fracos", pro1:"Sem KYC — privacidade total", pro2:"Bónus 200% até 1 BTC", pro3:"50 Free Spins em WANTED", pro4:"Levantamentos em menos de 2 min.", pro5:"5.000+ jogos, 50+ fornecedores", pro6:"Token $DICE com staking", pro7:"Integração Telegram", con1:"Apenas cripto", con2:"Wager 40× no bónus depósito", con3:"Free Spins expiram em 7 dias", label_faq:"❓ FAQ", faq1_q:"Como funciona o sistema progressivo? <span class='arrow'>▼</span>", faq1_a:"O bónus é libertado em <strong>10 parcelas de 10%</strong>: cada vez que apostas 6× o depósito, desbloqueias mais 10%.", faq2_q:"O Megadice requer verificação de identidade? <span class='arrow'>▼</span>", faq2_a:"Não para a maioria das transações. Megadice é <strong>No KYC</strong>.", faq3_q:"Quanto tempo tenho para os Free Spins? <span class='arrow'>▼</span>", faq3_a:"⚠️ <strong>Apenas 7 dias</strong> — ativa-os e joga-os rapidamente! O bónus depósito tem 14 dias.", faq4_q:"Qual é a aposta máxima com bónus ativo? <span class='arrow'>▼</span>", faq4_a:"⚠️ <strong>5€ por giro máximo</strong>. Exceder pode cancelar o bónus.", faq5_q:"Que criptomoedas são aceites? <span class='arrow'>▼</span>", faq5_a:"Bitcoin, Ethereum, Litecoin, Ripple, Tether, Dogecoin e 20+ outros. Levantamentos em menos de 2 minutos.", faq6_q:"O que é o token $DICE? <span class='arrow'>▼</span>", faq6_a:"$DICE é o token nativo. Ao fazer staking recebes recompensas passivas e airdrops exclusivos.", faq7_q:"O Megadice está disponível em todo o lado? <span class='arrow'>▼</span>", faq7_a:"Megadice não está disponível em todos os países. Se o teu país não é suportado, é necessário VPN. <strong>Durante o registo, usa o país do teu VPN.</strong>", label_cta:"🚀 Aderir ao Megadice", cta_final_title:"Aproveita o bónus exclusivo JeromeIbiza", cta_final_sub:`200% + 50 Free Spins em WANTED — via link JeromeIbiza`, cta_final_btn:"🎲 Registo-me no Megadice", cta_legal:"⚠️ 18+ · Jogo responsável · 800 200 990" },
+  ro:{ nav_bonus:"🎁 Bonusuri", nav_story:"👤 Povestea Mea", jerome_note:`<strong>JeromeIbiza:</strong> „Megadice este preferatul meu pentru raportul bonus/libertate. Fără KYC, 200% pe primul depozit, 50 Free Spins pe WANTED. Folosiți pur și simplu link-ul meu pentru oferta exclusivă."`, label_bonus:"🎁 Bonus exclusiv JeromeIbiza", bonus_title:`🎰 Ofertă de Bun Venit`, b1:"Bonus <strong>200%</strong> pe 1. depozit (până la <strong>1 BTC</strong>)", b2:"<strong>50 Free Spins</strong> pe WANTED Dead or a Wild", b3:"<strong>$5 credit sport</strong> gratuit", b4:"Depozit minim: <strong>20€</strong>", milestone_title:"⚡ Sistem de bonus progresiv — unic la Megadice", milestone_desc:`Bonusul este eliberat în <strong style="color:#fff">10 tranșe de 10%</strong> — de fiecare dată când pariezi de 6× depozitul inițial, se deblochează 10%:`, cta_btn:"🎲 Revendic bonusul meu Megadice", label_conditions:"📋 Condițiile bonusului", cond_mindep:"Depozit minim", cond_max:"Bonus maxim", cond_wager_bonus:"Rulaj bonus depozit", cond_wager_fs:"Rulaj Free Spins", cond_delay_bonus:"Termen bonus depozit", cond_delay_bonus_val:"14 zile", cond_delay_fs:"Termen Free Spins", cond_delay_fs_val:"⚠️ Doar 7 zile", cond_maxbet:"Pariu max cu bonus", cond_release:"Eliberare bonus", cond_release_val:"Tranșe de 10%", cond_kyc:"KYC obligatoriu", cond_kyc_val:"Nu ✅", cond_currency:"Monedă", cond_currency_val:"Doar crypto", warning_maxbet:`⚠️ <strong style="color:#FCA5A5;">Atenție:</strong> Pariu maxim de <strong style="color:#fff">5€ pe rotire</strong> cu bonus activ. Free Spins expiră în <strong style="color:#fff">7 zile</strong> — joacă-le rapid!`, label_promos:"🏆 Promoții regulate", promo1_title:"Saturday Slots", promo1_val:"2.500 USDT / săptămână<br>Turneu sloturi", promo2_title:"Live Casino Sunday", promo2_val:"2.500 USDT / săptămână<br>Evolution Live", promo3_title:"Drops & Wins", promo3_val:"$2M / lună<br>Pragmatic Play", promo4_title:"Turnee Fotbal", promo4_val:"100.000$+<br>Sezon fotbal", label_presentation:"🏠 Despre Megadice", presentation_text:`<strong style="color:#fff">Megadice</strong> este un casino crypto și sportsbook lansat în <strong style="color:#fff">2023</strong> cu licență <strong style="color:#fff">Curaçao</strong>. Fără KYC, retrageri în mai puțin de 2 minute, peste <strong style="color:#fff">5.000 de jocuri</strong> de la 50+ furnizori. Unic: token <strong style="color:#fff">$DICE</strong> (staking + airdrops) și integrare <strong style="color:#fff">Telegram</strong>.`, label_rating:"⭐ Părera noastră", rating_overall:"Scor general", rating_bonus:"Bonus", rating_privacy:"Confidențialitate", rating_games:"Jocuri", pros_title:"✅ Puncte forte", cons_title:"❌ Puncte slabe", pro1:"Fără KYC — confidențialitate totală", pro2:"Bonus 200% până la 1 BTC", pro3:"50 Free Spins pe WANTED", pro4:"Retrageri în mai puțin de 2 min.", pro5:"5.000+ jocuri, 50+ furnizori", pro6:"Token $DICE cu staking", pro7:"Integrare Telegram", con1:"Doar crypto", con2:"Rulaj 40× pe bonus depozit", con3:"Free Spins expiră în 7 zile", label_faq:"❓ FAQ", faq1_q:"Cum funcționează sistemul progresiv? <span class='arrow'>▼</span>", faq1_a:"Bonusul este eliberat în <strong>10 tranșe de 10%</strong>: de fiecare dată când pariezi 6× depozitul, se deblochează încă 10%.", faq2_q:"Megadice solicită verificarea identității? <span class='arrow'>▼</span>", faq2_a:"Nu pentru majoritatea tranzacțiilor. Megadice este <strong>No KYC</strong>.", faq3_q:"Cât timp am pentru Free Spins? <span class='arrow'>▼</span>", faq3_a:"⚠️ <strong>Doar 7 zile</strong> — activează-le și joacă-le repede! Bonusul depozit are 14 zile.", faq4_q:"Care este pariul maxim cu bonus activ? <span class='arrow'>▼</span>", faq4_a:"⚠️ <strong>5€ pe rotire maxim</strong>. Depășirea poate anula bonusul.", faq5_q:"Ce criptomonede sunt acceptate? <span class='arrow'>▼</span>", faq5_a:"Bitcoin, Ethereum, Litecoin, Ripple, Tether, Dogecoin și 20+ altele. Retrageri în mai puțin de 2 minute.", faq6_q:"Ce este token-ul $DICE? <span class='arrow'>▼</span>", faq6_a:"$DICE este token-ul nativ. Prin staking primești recompense pasive și airdrops exclusive.", faq7_q:"Este Megadice disponibil peste tot? <span class='arrow'>▼</span>", faq7_a:"Megadice nu este disponibil în toate țările. Dacă țara ta nu este acceptată, este necesar un VPN. <strong>La înregistrare, folosește țara corespunzătoare VPN-ului tău.</strong>", label_cta:"🚀 Alătură-te la Megadice", cta_final_title:"Profită de bonusul exclusiv JeromeIbiza", cta_final_sub:`200% + 50 Free Spins pe WANTED — prin link JeromeIbiza`, cta_final_btn:"🎲 Mă înregistrez pe Megadice", cta_legal:"⚠️ 18+ · Joc responsabil · 0800 800 820" },
+};
+
+function setLang(lang) {
+  const d = T[lang]; if (!d) return;
+  document.querySelectorAll('[data-t]').forEach(el => {
+    const k = el.getAttribute('data-t');
+    if (d[k] !== undefined) el.innerHTML = d[k];
+  });
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
+  document.documentElement.lang = lang;
+}
+</script>
+</body>
+</html>
